@@ -1,0 +1,15 @@
+:root {
+  --vp-home-hero-name-background: linear-gradient(to right, #8086f8, #73bae9);
+  --vp-home-hero-name-color: transparent;
+  --vp-c-brand: #848afa;
+  --vp-c-brand-light: #5a61ee;
+}
+
+.VPHome .main > * {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.VPHome .main .actions {
+  justify-content: center;
+}

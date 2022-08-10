@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --vp-home-hero-name-background: linear-gradient(to right, #8086f8, #73bae9);
   --vp-home-hero-name-color: transparent;

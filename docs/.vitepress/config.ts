@@ -16,7 +16,51 @@ export default {
 
 function sidebarMartin() {
   return [
-
+    {
+      text: 'Panduan',
+      items: [
+        { text: 'Tentang Martin Fowler', link: '/martin-fowler/' },
+      ]
+    },
+    {
+      text: 'Dispensables',
+      items: [
+        { text: 'Comments', link: '/martin-fowler/dispensables/comments' },
+        { text: 'Duplicate Code', link: '/martin-fowler/dispensables/duplicate-code' },
+        { text: 'Lazy Class', link: '/martin-fowler/dispensables/lazy-class' },
+        { text: 'Data Class', link: '/martin-fowler/dispensables/data-class' },
+        { text: 'Dead Code', link: '/martin-fowler/dispensables/dead-code' },
+        { text: 'Speculative Generality', link: '/martin-fowler/dispensables/speculative-generality' },
+      ]
+    },
+    {
+      text: 'Bloaters',
+      items: [
+        { text: 'Long Method', link: '/martin-fowler/bloaters/long-method' },
+        { text: 'Large Class', link: '/martin-fowler/bloaters/large-class' },
+        { text: 'Primitive Obsession', link: '/martin-fowler/bloaters/primitive-obsession' },
+        { text: 'Long Parameter List', link: '/martin-fowler/bloaters/long-parameter-list' },
+        { text: 'Data Clumps', link: '/martin-fowler/bloaters/data-clumps' },
+      ]
+    },
+    {
+      text: 'Object-Orientation Abusers',
+      items: [
+        { text: 'Switch Statements', link: '/martin-fowler/oo-abusers/switch-statements' },
+        { text: 'Temporary Field', link: '/martin-fowler/oo-abusers/temporary-field' },
+        { text: 'Refused Bequest', link: '/martin-fowler/oo-abusers/refused-bequest' },
+        { text: 'Alternative Classes with Different Interfaces', link: '/martin-fowler/oo-abusers/alternative-classes' },
+      ]
+    },
+    {
+      text: 'Couplers',
+      items: [
+        { text: 'Feature Envy', link: '/martin-fowler/couplers/feature-envy' },
+        { text: 'Inappropriate Intimacy', link: '/martin-fowler/couplers/inappropriate-intimacy' },
+        { text: 'Message Chains', link: '/martin-fowler/couplers/message-chains' },
+        { text: 'Middle Man', link: '/martin-fowler/couplers/middle-man' },
+      ]
+    },
   ]
 }
 
@@ -24,7 +68,6 @@ function sidebarGirish() {
   return [
     {
       text: 'Panduan',
-      collapsible: true,
       items: [
         { text: 'Tentang Girish', link: '/girish/' },
       ]

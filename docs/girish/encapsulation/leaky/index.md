@@ -1,6 +1,8 @@
 # Leaky Encapsulation
 
-[Link Video](https://www.youtube.com/watch?v=FXLKSYTwk_0&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=3)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FXLKSYTwk_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Smell ini terjadi jika pada suatu abstraction membocorkan detail melalui suatu method/interface. Smell ini berbeda dengan Deficient Encapsulation dimana kebocoran abstraction tersebut terjadi pada method yang sudah benar dalam access modifier. Selain itu, penamaan public method/implementation yang mengumbar-umbarkan detail implementation juga menimbulkan smell ini (Misal dalam class `List` terdapat public method bernama `bubbleSort()` yang seharusnya dapat diganti nama dengan `sort()` sehingga dapat diubah implementasi dari proses sorting tersebut).
 

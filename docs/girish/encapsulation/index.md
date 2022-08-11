@@ -16,7 +16,10 @@ Sebuah mobil mempunyai setir, pedal gas, dan pedal rem. Pedal rem berfungsi untu
 
 ### Prinsip Encapsulation
 
-[Link Video](https://www.youtube.com/watch?v=WqXM5lHEwGY&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=1)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WqXM5lHEwGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 ![Girish encapsulation principles](encapsulation_principles.png "Girish encapsulation principles")
 

@@ -1,8 +1,8 @@
 ---
 layout: home
 
-title: Refactoring
-titleTemplate: Vite & Vue Powered Static Site Generator
+title: Home
+titleTemplate: Refactoring ID
 
 hero:
   name: Refactoring

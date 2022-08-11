@@ -1,6 +1,9 @@
 # Unnecessary Hierarchy
 
-[Link Video](https://www.youtube.com/watch?v=hfNd8QPcWDk&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hfNd8QPcWDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Smell ini terjadi ketika pembagian class yang seharusnya dikaitkan dengan perbedaan behaviour, malah dibagikan hingga variasi data-datanya yang seharusnya tidak diperlukan dalam pembagian class. Dalam perbedaan atas data, pembagian class seharusnya tidak perlu dilakukan karena hanya memperbanyak hierarki yang sudah ada dan tentunya cukup dijadikan sebagai member object dalam class.
 

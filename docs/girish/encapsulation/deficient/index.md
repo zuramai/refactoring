@@ -1,6 +1,10 @@
 # Deficient Encapsulation
 
-[Link Video](https://www.youtube.com/watch?v=r-wphP9hQ8E&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=2)
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r-wphP9hQ8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 Di bahasa pemrograman Java, terdapat 4 level access modifier yang tentunya berperan sangat penting dalam membatasi akses data yaitu:
 

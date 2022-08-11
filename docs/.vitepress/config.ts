@@ -99,7 +99,7 @@ function sidebarGirish() {
         { text: 'Unfactored Hierarchy', link: '/girish/hierarchy/unfactored/' },
         { text: 'Wide Hierarchy', link: '/girish/hierarchy/wide/' },
         { text: 'Speculative Hierarchy', link: '/girish/hierarchy/speculative/' },
-        { text: 'Deep Hierarchy', link: '/girish/hierarchy/deep/' },
+        // { text: 'Deep Hierarchy', link: '/girish/hierarchy/deep/' },
         { text: 'Rebellious Hierarchy', link: '/girish/hierarchy/rebellious/' },
         { text: 'Broken Hierarchy', link: '/girish/hierarchy/broken/' },
         { text: 'Multipath Hierarchy', link: '/girish/hierarchy/multipath/' },

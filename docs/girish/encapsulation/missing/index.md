@@ -1,6 +1,8 @@
 # Missing Encapsulation
 
-[Link Video](https://www.youtube.com/watch?v=tHKGrugra70&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=4)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tHKGrugra70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Smell ini terjadi bila variabel tersebut tidak terenkapsulasi dalam abstraksi/hierarki. Perlu diwaspadai jika smell ini juga dapat menimbulkan ledakan class jika smell ini terjadi pada hierarki yang bercabang-cabang ataupun hierarki 'bucin' dikarenakan adanya penambahan variasi baru dalam hierarki. Smell ini juga disamaratakan dengan Divergent Changes pada class dan Parallel Inheritence pada hierarki.
 

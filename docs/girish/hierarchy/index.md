@@ -21,7 +21,9 @@ Semua ini tentunya merupakan kemajuan dalam dunia biologi berkat [Carl Linnaeus]
 
 ### Prinsip Hierarchy
 
-[Link Video](https://www.youtube.com/watch?v=FvLtPJzya5o&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FvLtPJzya5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ![Girish hierarchy principles](hierarchy-principles.png "Girish encapsulation principles")
 

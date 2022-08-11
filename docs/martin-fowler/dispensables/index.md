@@ -2,7 +2,7 @@
 
 Semua smell di dalam grup ini berkaitan dengan bagian-bagian code kurang berguna dan bisa dibuang.
 
-- [Comments](comments)
+- [Comments](comments/)
 - [Duplicate Code](duplicate-code/)
 - [Lazy Class](lazy-class/)
 - [Data Class](data-class/)

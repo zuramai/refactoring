@@ -16,7 +16,9 @@ Buku adalah konten yang berisikan sekumpulan teks paragraf. Bayangkan apa yang t
 
 ### Prinsip Modularization
 
-[Link Video](https://www.youtube.com/watch?v=Q5Y42rdZza4&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q5Y42rdZza4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ![Girish Modularization principles](modularization_principles.png "Girish modularization principles")
 

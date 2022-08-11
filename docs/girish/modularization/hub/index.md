@@ -1,6 +1,9 @@
 # Hub-like Dependencies
 
-[Link Video](https://www.youtube.com/watch?v=ImUM8T-1fy4&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ImUM8T-1fy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ![Inner and outer dependencies of a class](hub-1.png "Inner and outer dependencies of a class")
 

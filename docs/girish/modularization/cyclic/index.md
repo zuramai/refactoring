@@ -1,6 +1,8 @@
 # Cyclically-dependent Modularization
 
-[Link Video](https://www.youtube.com/watch?v=Xm5T75YZB0I&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xm5T75YZB0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ![Graph of cyclic dependency](cyclic-1.png "Graph of cyclic dependency")
 

@@ -1,5 +1,4 @@
 import DefaultTheme from 'vitepress/theme'
-import './tailwind.css'
 import './custom.css'
 import Tabs from '../../../components/Tabs/Tabs.vue'
 import Tab from '../../../components/Tabs/Tab.vue'

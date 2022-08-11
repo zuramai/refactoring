@@ -1,6 +1,8 @@
 # Unfactored Hierarchy
 
-[Link Video](https://www.youtube.com/watch?v=IJFO8YlSosc&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IJFO8YlSosc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Smell ini terjadi pada class-class dalam hierarki dimana terdapat bagian code yang duplikat. Duplikasi code bisa terjadi pada class yang bersaudaraan ataupun pada code-code yang mirip antar superclass dan subclass.
 

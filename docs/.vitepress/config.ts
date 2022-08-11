@@ -10,7 +10,11 @@ export default {
     nav: [
       { text: 'Versi Martin Fowler', link: '/martin-fowler/' },
       { text: 'Versi Girish', link: '/girish/' },
-    ]
+    ],
+    footer: {
+      message: 'Created by Saugi',
+      copyright: 'Materi dibuat oleh @mrp130'
+    }
   },
 }
 
@@ -121,7 +125,7 @@ function sidebarGirish() {
       collapsible: true,
       items: [
         { text: 'Tentang', link: '/girish/encapsulation/' },
-        { text: 'Deficient Encapsulation', link: '/girish/encapsulation/missing/' },
+        { text: 'Deficient Encapsulation', link: '/girish/encapsulation/deficient/' },
         { text: 'Leaky Encapsulation', link: '/girish/encapsulation/leaky/' },
         { text: 'Missing Encapsulation', link: '/girish/encapsulation/missing/' },
         { text: 'Unexploited Encapsulation', link: '/girish/encapsulation/unexploited/' },

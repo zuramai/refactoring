@@ -30,7 +30,7 @@ Perhatikan <github-url to="before/Book.java">Book.java</github-url> pada package
 
 ### Penyelesaian
 
-ISBN diekstrak menjadi hirarki baru. <github-url to="after/Book.java">ISBN.java](after/ISBN.java) sebagai parent-nya dan diturunkan menjadi [ISBN10](after/ISBN10.java) dan [ISBN13](after/ISBN13.java). Agar switch statement lebih rapi, dibuat [ISBNFactory](after/ISBNFactory.java) untuk digunakan oleh class [Book</github-url>.
+ISBN diekstrak menjadi hirarki baru. <github-url to="after/ISBN.java">ISBN.java</github-url> sebagai parent-nya dan diturunkan menjadi <github-url to="after/ISBN10.java">ISBN10.java</github-url> dan <github-url to="after/ISBN13.java">ISBN13.java</github-url>. Agar switch statement lebih rapi, dibuat [ISBNFactory](after/ISBNFactory.java) untuk digunakan oleh class <github-url to="after/Book.java">Book</github-url>.
 
 ## When to Ignore
 

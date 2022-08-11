@@ -28,7 +28,7 @@ Jika masalah tersebut menyangkut adanya duplikat dari code-code antar class, ter
 
 Salah satu masalah smell paling sederhana adalah masalah hierarki antar dua atau lebih subclass yang menyangkut 1 atau lebih method yang seharusnya dapat di-*pull up* (alias diimplementasikan abstract method di superclass) malah dibiarkan begitu saja dalam keadaan duplikat.
 
-Namun pada kasus hierarki class entity dan game system dimana class tersebut menyangkut adanya duplikasi code snippet antar class pada class <github-url to="before/Player.java">Monster.java](before/Monster.java) dan [Player.java</github-url> dimana terdapat kesamaan pada bagian code pada method implementasi `hit(int damage)` pada bagian berikut:
+Namun pada kasus hierarki class entity dan game system dimana class tersebut menyangkut adanya duplikasi code snippet antar class pada class <github-url to="before/Player.java">Monster.java</github-url> dan <github-url to="before/Player.java">Player.java</github-url> dimana terdapat kesamaan pada bagian code pada method implementasi `hit(int damage)` pada bagian berikut:
 
 ```java
 // Monster.java

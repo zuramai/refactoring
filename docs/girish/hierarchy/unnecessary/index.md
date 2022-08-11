@@ -34,7 +34,7 @@ Sebagai jalan penyelesaian, bagikan class hanya jika pembagian class tersebut te
 
 Dalam menyelesaikan smell tersebut, terdapat 3 cara dalam pembagian class yaitu:
 
-1. Jika pembagian class tersebut menyangkut penamaan atribut, lakukan (Replace Subclass with Fields)[https://sourcemaking.com/refactoring/replace-subclass-with-fields] dengan mengubah subclass menjadi atribut dalam class.
+1. Jika pembagian class tersebut menyangkut penamaan atribut, lakukan [Replace Subclass with Fields](https://sourcemaking.com/refactoring/replace-subclass-with-fields) dengan mengubah subclass menjadi atribut dalam class.
 2. Jika pembagian class tersebut menyangkut masalah penggolongan dan dapat diselesaikan dengan Enumeration, ubah pembagian class tersebut menjadi Enumeration.
 
 

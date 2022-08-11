@@ -2,12 +2,13 @@
 
 const props = defineProps({
     name: String,
-    text: String
+    text: String,
+    maxHeight: Number,
 })
 const activeTab = inject<string>('activeTab')
 </script>
 <template>
-    <div class="tab__content" v-show="activeTab === name">
+    <div class="tab__content" v-show="activeTab === name" :style="{ maxHeight: `${maxHeight}px` }">
         <slot></slot>
     </div>
 </template>
@@ -16,5 +17,8 @@ const activeTab = inject<string>('activeTab')
     margin-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+.tab__content {
+    overflow-y: auto;
 }
 </style>

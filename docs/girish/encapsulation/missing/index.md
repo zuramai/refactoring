@@ -17,9 +17,9 @@ Smell ini terjadi bila variabel tersebut tidak terenkapsulasi dalam abstraksi/hi
 
 ## Permasalahan
 
-![Struktur class Encryption yang membludak](missing-1.png "Struktur class Encryption yang membludak")
+![Struktur class Encryption yang membludak](missing-1.png)
 
-Misal dalam package before, class <github-url to="before/Encryption.java">Encryption</github-url> berisikan implementasi dan variasi yang dimuatkan bersamaan dalam satu abstraksi. Hal ini tentunya tidak baik jika terjadi perubahan atau penambahan variasi baru dalam class tersebut sehingga menimbulkan [Divergent Changes](Change-Preventers#Divergent-Changes).
+Misal dalam package before, class <github-url to="before/Encryption.java">Encryption</github-url> berisikan implementasi dan variasi yang dimuatkan bersamaan dalam satu abstraksi. Hal ini tentunya tidak baik jika terjadi perubahan atau penambahan variasi baru dalam class tersebut sehingga menimbulkan [Divergent Changes](../../../martin-fowler/change-preventers/divergent-change/).
 
 ## Penyelesaian
 

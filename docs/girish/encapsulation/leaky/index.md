@@ -16,7 +16,7 @@ Smell ini terjadi jika pada suatu abstraction membocorkan detail melalui suatu m
 
 ## Masalah
 
-![Member class TodoList](leaky-1.png "Member class TodoList")
+![Member class TodoList](leaky-1.png)
 
 Di package before, terdapat class <github-url to="before/ToDoList.java">TodoList</github-url> dimana terdapat method `getList()` yang seharusnya return Vector salinan dari `list`.
 

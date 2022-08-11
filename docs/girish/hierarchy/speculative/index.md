@@ -24,19 +24,19 @@ Jalan paling cepat dalam menyelesaikan speculative hierarchy adalah dengan [Coll
 
 Misal dalam pembuatan software berbasis web yang dapat mengakomodir pembuatan blog, terdapat 2 jenis anotasi blog yang dapat dilakukan dalam melakukan blogging yaitu `HTML`, `Wordpress style` yang tentunya tertulis dalam requirement.
 
-![Hierarki web software blogging](hierarchy-speculative-1.png "Hierarki web software blogging")
+![Hierarki web software blogging](hierarchy-speculative-1.png)
 
 Pada mula-mulanya, developer menyajikan kedua fitur tersebut dalam implementasi pembuatan post namun lama kelamaan, developer meramal akan ada anotasi baru dalam melakukan blogging yaitu `Markdown` dan `Wiki markup` sehingga developer membuatkan class spekulatif ke dalam hierarki, tak lupa dengan intermediate classnya, `MarkupStyle` untuk mengakomodir kebutuhan markup languages (bertanda bintang).
 
 Lama kelamaan, ramalan markup dalam blogging tersebut ternyata belum pernah terjadi dan terabaikan begitu saja hingga sekarang dan akhirnya, smell Speculative Hierarchy malah terjadi karena adanya class yang dipersiapkan untuk keperluan di masa yang akan mendatang namun tidak pernah terpakai sama sekali.
 
-![Buang hierarki bertanda bitang (alias spekulatif)](hierarchy-speculative-2.png "Buang hierarki bertanda bitang (alias spekulatif)")
+![Buang hierarki bertanda bitang (alias spekulatif)](hierarchy-speculative-2.png)
 
 Sebagai gantinya, lakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dengan buang hierarki `MarkupStyle` beserta class-classnya sehingga hierarki bersih dari class-class spekulatif.
 
 ## Contoh 2: Digital Currency speculatives
 
-Dimabil dari kasus smell Martin Fowler yaitu [Speculative Generalities](/martin-fowler/dispensables/speculative-generality/), terdapat kasus dimana terdapat 2 mata uang yaitu `USD` dan `IDR` dalam requirement namun programmer berspekulasi bahwa IDR dan USD adalah kurs jenis tradisional, nantinya akan ada kurs jenis digital seperti bitcoin. Oleh karena itu, Programmer membuat hirarki seperti di dalam [package `before`](./before).
+Dimabil dari kasus smell Martin Fowler yaitu [Speculative Generalities](/martin-fowler/dispensables/speculative-generality/), terdapat kasus dimana terdapat 2 mata uang yaitu `USD` dan `IDR` dalam requirement namun programmer berspekulasi bahwa IDR dan USD adalah kurs jenis tradisional, nantinya akan ada kurs jenis digital seperti bitcoin. Oleh karena itu, Programmer membuat hirarki seperti di dalam <github-url to="before">package `before`</github-url>.
 
 Sebagai jalan penyelesaiannya, lakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dengan menghapus intermediate class `Traditional` dan `Digital`, sehingga class `USD` dan `IDR` menjadi turunan langsung dari class `Currency`.
 

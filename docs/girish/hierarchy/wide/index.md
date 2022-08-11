@@ -16,7 +16,7 @@ Smell ini terjadi ketika suatu hierarki inheritance terlalu banyak subclass tanp
 
 ## Penyelesaian
 
-![Turn flat hierarchy to tree-hierarchy](hierarchy-wide-1.png "Turn flat hierarchy to tree-hierarchy")
+![Turn flat hierarchy to tree-hierarchy](hierarchy-wide-1.png)
 
 Smell wide hierarchy dapat diselesaikan dengan melakukan introduce intermediate class (baik abstract class turunan superclass maupun interface).
 
@@ -28,7 +28,7 @@ Smell wide hierarchy dapat diselesaikan dengan melakukan introduce intermediate 
 
 Dalam buku Girish, ia menyinggung salah satu hierarki class bernama `java.util.EventObject` dimana pada class tersebut terdapat banyak turunan dimana salah satu tiga subclass yang mempunyai penamaan behaviour yang mirip yaitu `TreeExpansionEvent`, `TreeModelEvent`, dan `TreeSelectionEvent`.
 
-![TreeEvent subclasses after refactoring](hierarchy-wide-3.png "TreeEvent subclasses after refactoring")
+![TreeEvent subclasses after refactoring](hierarchy-wide-3.png)
 
 Smell ketiga subclass tersebut kemudian diselesaikan dengan melakukan introduce intermediate class bernama `TreeEvent` dimana class ini merupakan subclass dari `EventObject` dan superclass dari ketiga class tersebut yang berisikan behaviour dari tree.
 

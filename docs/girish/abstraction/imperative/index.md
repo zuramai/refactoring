@@ -12,7 +12,7 @@ Sesuai namanya, paradigma OOP: **OBJECT**-oriented programming. Class di dalam O
 
 ### Masalah
 
-Perhatikan package [before](before). Terdapat class CreateReport, DisplayReport, dan CopyReport. Disini sudah jelas terjadi imperative abstraction karena ketiga class tersebut merupakan kata kerja, bukan kata benda.
+Perhatikan package <github-url to="before">before</github-url>. Terdapat class CreateReport, DisplayReport, dan CopyReport. Disini sudah jelas terjadi imperative abstraction karena ketiga class tersebut merupakan kata kerja, bukan kata benda.
 
 ### Penyelesaian
 

@@ -1,14 +1,14 @@
 # Modularization
 
-![Girish modularization smell](modularization.png "Girish modularization smell")
+![Girish modularization smell](modularization.png)
 
 Semua smell di dalam grup ini berkaitan dengan kesalahan dalam merancang modul-modul di dalam hierarki.
 
 - Modularization Intro | [Link Video](https://www.youtube.com/watch?v=Q5Y42rdZza4&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Broken Modularization](broken) | [Link Video](https://www.youtube.com/watch?v=0aeIbhESMco&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Insufficient Modularization](insufficient) | [Link Video](https://www.youtube.com/watch?v=eRAoks2udlk&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Cyclically-dependent Modularization](cyclic) | [Link Video](https://www.youtube.com/watch?v=Xm5T75YZB0I&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Hub-like Modularization](hub) | [Link Video](https://www.youtube.com/watch?v=ImUM8T-1fy4&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Broken Modularization](broken/) | [Link Video](https://www.youtube.com/watch?v=0aeIbhESMco&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Insufficient Modularization](insufficient/) | [Link Video](https://www.youtube.com/watch?v=eRAoks2udlk&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Cyclically-dependent Modularization](cyclic/) | [Link Video](https://www.youtube.com/watch?v=Xm5T75YZB0I&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Hub-like Modularization](hub/) | [Link Video](https://www.youtube.com/watch?v=ImUM8T-1fy4&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
 
 ## Filosofi
 
@@ -20,7 +20,7 @@ Buku adalah konten yang berisikan sekumpulan teks paragraf. Bayangkan apa yang t
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q5Y42rdZza4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-![Girish Modularization principles](modularization_principles.png "Girish modularization principles")
+![Girish Modularization principles](modularization-principles.png)
 
 Secara teoretis, Sebuah class/abstraksi seharusnya memiliki **tingkat kohesi yang tinggi dan coupling yang rendah** sehingga class tersebut mempunyai tanggungjawab yang sesuai, function dan member yang saling berinteraksi satu sama lain tanpa bergantung pada class lain.
 

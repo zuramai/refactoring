@@ -4,17 +4,17 @@
 
 Semua smell di dalam grup ini berkaitan dengan kesalahan dalam mendesain abstraksi.
 
-- [Missing Abstraction](missing)
-- [Imperative Abstraction](imperative)
-- [Incomplete Abstraction](incomplete)
-- [Multifaceted Abstraction](multifaceted)
-- [Unnecessary Abstraction](unnecessary)
-- [Unutilized Abstraction](unutilized)
-- [Duplicate Abstraction](duplicate)
+- [Missing Abstraction](missing/)
+- [Imperative Abstraction](imperative/)
+- [Incomplete Abstraction](incomplete/)
+- [Multifaceted Abstraction](multifaceted/)
+- [Unnecessary Abstraction](unnecessary/)
+- [Unutilized Abstraction](unutilized/)
+- [Duplicate Abstraction](duplicate/)
 
 ## Prinsip abstraction
 
-![Girish abstraction principles](abstraction_principles.png "Girish abstraction principles")
+![Girish abstraction principles](abstraction-principles.png)
 
 Menurut Girish Suryanarayana dkk, terdapat 5 prinsip abstraction yaitu:
 

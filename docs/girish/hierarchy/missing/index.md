@@ -8,7 +8,7 @@
 
 Smell ini terjadi ketika mayoritas class-class turunannya (subclass) mempunyai method/behaviour yang seharusnya bisa ditempatkan pada superclass sebagai method atau `abstract` method.
 
-Smell ini seringkali disandingkan dengan smell [Switch-statements](../../../martin-fowler/oo_abusers/switch_statements/) dikarenakan smell ini identik dengan pemakaian `if-else` atau `switch` statements yang berulang-ulang (termasuk dengan `instanceof` untuk class matching pada object dan typecasting).
+Smell ini seringkali disandingkan dengan smell [Switch-statements](../../../martin-fowler/oo-abusers/switch-statements/) dikarenakan smell ini identik dengan pemakaian `if-else` atau `switch` statements yang berulang-ulang (termasuk dengan `instanceof` untuk class matching pada object dan typecasting).
 
 ## Penyebab
 

@@ -1,19 +1,19 @@
 # Hierarchy
 
-![Girish hierarchy smell](hierarchy.png "Girish encapsulation smell")
+![Girish hierarchy smell](hierarchy.png)
 
 Semua smell di dalam grup ini berkaitan dengan kesalahan dalam merancang hierarki.
 
 - Hierarchy Intro | [Link Video](https://www.youtube.com/watch?v=FvLtPJzya5o&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Missing Hierarchy](missing) | [Link Video](https://www.youtube.com/watch?v=Z0gVvdARFWw&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Unnecessary Hierarchy](unnecessary) | [Link Video](https://www.youtube.com/watch?v=hfNd8QPcWDk&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Unfactored Hierarchy](unfactored) | [Link Video](https://www.youtube.com/watch?v=IJFO8YlSosc&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Wide Hierarchy](wide) | [Link Video](https://www.youtube.com/watch?v=7pyZYGDz54w&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
-- [Speculative Hierarchy](speculative) | [Link Video](https://www.youtube.com/watch?v=WaI-tpREgd8&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Missing Hierarchy](missing/) | [Link Video](https://www.youtube.com/watch?v=Z0gVvdARFWw&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Unnecessary Hierarchy](unnecessary/) | [Link Video](https://www.youtube.com/watch?v=hfNd8QPcWDk&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Unfactored Hierarchy](unfactored/) | [Link Video](https://www.youtube.com/watch?v=IJFO8YlSosc&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Wide Hierarchy](wide/) | [Link Video](https://www.youtube.com/watch?v=7pyZYGDz54w&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
+- [Speculative Hierarchy](speculative/) | [Link Video](https://www.youtube.com/watch?v=WaI-tpREgd8&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
 
 ## Filosofi
 
-![Human Taxonomy](img/girish/hierarchy/hierarchy-philosophy.png "Linnaeus’ taxonomy showing the hierarchical classification of the human species")
+![Human Taxonomy](hierarchy-philosophy.png)
 
 Semua makhluk hidup (baik hewan, tumbuhan, manusia, bakteri, jamur, dan makhluk hidup lainnya) dikelompokkan berdasarkan klasifikasi spesies mulai dari kingdom, filum, class, ordo, family, genus, hingga spesies. Pengelompokkan makhluk hidup (taxonomy) tentunya mempermudah identifikasi makhluk hidup di muka bumi ini, termasuk manusia. Fakta menarik bahwa manusia merupakan spesies makhluk hidup bernamakan *Homo Sapiens*, dimana secara hierarki dapat ditujukan pada gambar diatas, merupakan hewan (bertulang belakang) Mamalia *ordo* Primata yang berevolusi dari saudara-saudara se-ordonya.
 
@@ -25,7 +25,7 @@ Semua ini tentunya merupakan kemajuan dalam dunia biologi berkat [Carl Linnaeus]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FvLtPJzya5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-![Girish hierarchy principles](hierarchy-principles.png "Girish encapsulation principles")
+![Girish hierarchy principles](hierarchy-principles.png )
 
 Terdapat 5 prinsip dalam merancang hierarki:
 

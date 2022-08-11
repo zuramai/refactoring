@@ -6,8 +6,8 @@
 
 Smell ini terjadi jika pada data member, field, atau method yang seharusnya dikumpulkan dalam 1 class/abstraksi malah terpisah dan tersebar di abstraksi lain. Smell ini sering dimanifestasikan sebagai:
 
-- Class yang hanya menampung data tapi tidak ada method yang memperlakukan data/berinteraksi dalam class. Smell ini disamaratakan dengan [Data Class](../../../martin-fowler/dispensables/data_class).
-- Method yang senang bermain dengan member lain di class lain. Smell ini disamaratakan dengan [Feature Envy](../../../martin-fowler/couplers/feature_envy).
+- Class yang hanya menampung data tapi tidak ada method yang memperlakukan data/berinteraksi dalam class. Smell ini disamaratakan dengan [Data Class](../../../martin-fowler/dispensables/data-class/).
+- Method yang senang bermain dengan member lain di class lain. Smell ini disamaratakan dengan [Feature Envy](../../../martin-fowler/couplers/feature-envy/).
 
 ## Penyebab
 

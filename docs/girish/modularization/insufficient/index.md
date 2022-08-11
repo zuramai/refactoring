@@ -6,8 +6,8 @@
 
 Smell ini terjadi karena adanya abstraksi yang terlalu besar dan harus dipecahkan (dekomposisi) ke beberapa abstraksi baru. Terdapat 2 jenis smell yaitu:
 
-- **Bloated interface**: Abstraksi yang mempunyai banyak member dalam public interface. Smell ini disamaratakan dengan [Large Class](../../../martin-fowler/bloaters/large_class).
-- **Bloated implementation**: Abstraksi dengan jumlah method yang banyak ataupun memiliki kompleksitas yang terlalu kompleks. Smell ini disamaratakan dengan [Long Method](../../../martin-fowler/bloaters/long_method).
+- **Bloated interface**: Abstraksi yang mempunyai banyak member dalam public interface. Smell ini disamaratakan dengan [Large Class](../../../martin-fowler/bloaters/large-class/).
+- **Bloated implementation**: Abstraksi dengan jumlah method yang banyak ataupun memiliki kompleksitas yang terlalu kompleks. Smell ini disamaratakan dengan [Long Method](../../../martin-fowler/bloaters/long-method/).
 
 ## Teori: Cyclomatic Complexity
 

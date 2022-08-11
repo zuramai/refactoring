@@ -5,7 +5,7 @@ editLink: true
 
 Untuk pembagian materi, kita menggunakan pengelompokan group smell yang telah dibuat oleh Girish Suryanarayana et al. di bukunya.
 
-![Girish smell groups](all_smell.png)
+![Girish smell groups](all-smell.png)
 
 Semua contoh dalam repository ini dibagi dalam dua package. `before` dan `after`. Sesuai dengan namanya, `before` adalah contoh code yang memiliki code smell yang akan dibahas, `after` adalah hasil setelah di-refactor.
 

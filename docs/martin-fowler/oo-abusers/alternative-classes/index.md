@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/alternative-classes-with-different-interfaces)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Ada beberapa class yang memiliki fungsi yang sama, namun tidak datang dari interface atau abstract class.
 
@@ -31,7 +31,7 @@ public class PacMan {
 }
 ```
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk contoh kasus ini, kita melakukan [Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass). Kita membuat interface [Drawable.java](after/Drawable.java) yang akan di-implement oleh kedua class.
 

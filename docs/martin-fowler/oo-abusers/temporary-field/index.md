@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/temporary-field)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Terdapat field yang bukan bagian dari data class yang bersangkutan. Field ini hanya dipakai sementara oleh beberapa fungsi. Kemudian field ini tidak pernah lagi digunakan.
 
@@ -31,7 +31,7 @@ Di dalam class ini, bayangkan ketiga variabel itu akan digunakan di fungsi `shor
 
 BojekDriver seharusnya hanya memperdulikan data miliknya. Variabel f, g, dan h hanyalah temporary field untuk keperluan algoritma A*.
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk contoh kasus ini, kita melakukan [Extract Class](https://sourcemaking.com/refactoring/extract-class)
 

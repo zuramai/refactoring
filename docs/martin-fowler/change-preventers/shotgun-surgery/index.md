@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/shotgun-surgery)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi ketika kita ingin mengganti atau menambahkan fitur ke dalam code, kita perlu mengganti bagian code yang tersebar di banyak class lain. Analoginya adalah bila seseorang ditembak dengan senjata api jenis shotgun, luka tembak akan menyebar di banyak tempat.
 
@@ -14,6 +14,6 @@ Bila kita tidak segera melakukan refactor, kita perlu selalu melakukan perubahan
 
 Contoh masalah lainnya: bila cara validasi price diganti, kita juga perlu melakukan shotgun surgery.
 
-### Penyelesaian
+## Penyelesaian
 
 Kita ubah access modifier price menjadi private. Code validasi price dipindahkan ke `setPrice`. Lalu fungsi setter ditambahkan logging. Sekarang, update value price sudah terpusat di dalam fungsi `setPrice`, sehingga bila suatu saat nanti ada perubahan mengenai update value price, kita cukup mengubah 1x saja di satu tempat.

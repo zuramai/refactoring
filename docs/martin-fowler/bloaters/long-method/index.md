@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/long-method)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi ketika ada sebuah method yang terlalu panjang. Method yang terlalu panjang dapat ditentukan dengan beberapa indikator:
 
@@ -14,7 +14,7 @@ Smell ini terjadi ketika ada sebuah method yang terlalu panjang. Method yang ter
 
 Pada contoh [SemesterMenu.java](before/SemesterMenu.java), terdapat method `menu`, `create`, dan `delete` yang melebihi 10 baris.
 
-### Penyelesaian
+## Penyelesaian
 
 Dilakukan [Extract Method](https://sourcemaking.com/refactoring/extract-method) pada method `menu`, `create`, dan `delete`.
 
@@ -24,6 +24,6 @@ Code di dalam method `menu` diekstrak menjadi `showSemesters()`, `printAndGetMen
 
 Untuk method create, delete, dan bagian code input menu. Kita dapat melihat terdapat [duplicate code](https://sourcemaking.com/refactoring/smells/duplicate-code) yang juga membuat method menjadi panjang. Hal ini dapat diatasi dengan mengakali logic input menjadi method `getDateInput`, `getIntInput`, dan `getStringInput`.
 
-### Tambahan
+## Tambahan
 
 Refactor pada contoh `SemesterMenu` ini belum selesai. Terdapat smell Large Class yang akan diurus [disini](../large-class/).

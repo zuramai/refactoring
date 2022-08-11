@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/duplicate-code)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Terdapat bagian code yang sama atau mirip.
 
@@ -12,6 +12,6 @@ Satu hal yang bisa menjadi *rule of thumb* adalah [Rule of Three](https://en.wik
 
 Pada contoh kasus di [Foo.java](before/Foo.java) terdapat banyak bagian code yang duplikat di method bar, baz, dan qux.
 
-### Penyelesaian
+## Penyelesaian
 
 Terjadi [extract method](https://sourcemaking.com/refactoring/extract-method) di banyak tempat. Selain itu, `for` yang serupa tetapi tidak sama juga diakali dengan cara di-extract namun ditambahi variabel sehingga bisa digunakan di ketiga fungsi tersebut.

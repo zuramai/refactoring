@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/lazy-class)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Memecah class memang bagus, terlebih bila bertujuan untuk memenuhi SRP. Class yang terlalu gemuk juga sudah dibahas di code smell Large Class.
 
@@ -15,6 +15,6 @@ Lazy class bisa saja terjadi karena refactoring. Awalnya class ini memiliki fung
 Pada contoh di [PriceValidator.java](before/PriceValidator.java). Class hanya memiliki satu buah fungsi untuk validasi harga.
 
 
-### Penyelesaian
+## Penyelesaian
 
 Fungsi `validate` dipindahkan ke class [Price.java](after/Price.java) kemudian diberi nama yang lebih sesuai untuk class Price: `isPriceValid`. Setelah dipindahkan, class PriceValidator bisa dihapus.

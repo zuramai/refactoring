@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/feature-envy)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi bila ada sebuah method yang lebih sering mengakses data class lain ketimbang class sendiri. Class sendiri pun menjadi 'cemburu'. Bila hal ini terjadi, harus dipikirkan bagaimana cara mengusir method ini ke class lain tersebut.
 
@@ -14,7 +14,7 @@ public boolean isScored(Exam exam) {
 }
 ```
 
-### Penyelesaian
+## Penyelesaian
 
 Dilakukan [Move Method](https://sourcemaking.com/refactoring/move-method) pada fungsi `isScored`. Perhatikan di package `after`, isScored dipindahkan ke class Exam.
 
@@ -26,6 +26,6 @@ if(this.isScored()) {
   }
 ```
 
-### Tambahan
+## Tambahan
 
 Di bukunya, Martin Fowler menyatakan bahwa ada beberapa kondisi class atau method yang sengaja dirancang untuk hanya consume data di class lain. Contoh yang paling umum terjadi adalah penggunaan design pattern Strategy atau Visitor. Design pattern ini masuk ke dalam Gang of Four Design Pattern, akan kita pelajari di semester depan.

@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/switch-statements)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Terdapat pemakaian switch atau if-else untuk menentukan operasi pada variasi tipe-tipe tertentu.
 
@@ -39,7 +39,7 @@ Di dalam contoh ini, if-else square dan triangle ada di 2 class. Pada kondisi ny
 
 Semakin sedikit kita menggunakan if-else di dalam code, maka akan semakin baik. Bahkan ada orang yang membuat campaign untuk ini: [Anti-IF Campaign](https://francescocirillo.com/pages/anti-if-campaign).
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk contoh kasus ini, kita melakukan tahapan berikut:
 
@@ -55,13 +55,13 @@ Setelah class `Square` dan `Triangle` sudah terbentuk. Logic print dari `ShapePr
 
 Dengan begini, bila ada jenis baru, misalkan `Circle`, kita tinggal extends dari class `Shape`.
 
-### Tambahan
+## Tambahan
 
-#### Revisi Martin Fowler
+### Revisi Martin Fowler
 
 Switch Statements adalah code smell yang dibuat Fowler di buku edisi pertamanya. Di buku edisi kedua, beliau meniadakan code smell ini. Beliau membuat smell baru bernama **Repeated Switches**. Beliau ingin lebih menekankan if-else yang perlu diberantas adalah if-else yang berstruktur sama/mirip dan sering muncul di beberapa tempat. Contohnya di contoh kasus ini if-else square dan triangle muncul dua kali.
 
-#### ShapeFactory
+### ShapeFactory
 
 User tetap akan meng-input string melalui console. Oleh karena itu, kita perlu menyiapkan sebuah class [Factory](after/ShapeFactory) untuk membuat class Shape dari string yang diinput.
 

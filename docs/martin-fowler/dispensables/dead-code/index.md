@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/dead-code)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Bagian code yang tidak akan tersentuh ketika sistem dijalankan. Contoh yang paling mudahnya adalah sebagai berikut:
 
@@ -66,7 +66,7 @@ public double calculate(double price, boolean isDiscount){
 
 
 
-### Penyelesaian
+## Penyelesaian
 
 Setelah membaca code di bagian `before`, Anda tentunya menyadari bahwa bagian code ini adalah dead code yang tersembunyi.
 

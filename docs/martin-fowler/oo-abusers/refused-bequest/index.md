@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/refused-bequest)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Refused bequest arti harafiahnya adalah "menolak warisan". Dalam smell ini, sebuah class turunan tidak memakai seluruh method hasil extendsnya. Hal ini mengarah ke violasi LSP dan/atau ISP.
 
@@ -50,7 +50,7 @@ public synchronized E remove(int index) {
 
 Hal ini menjadi code smell **Refused Bequest**, karena class Stack menolak warisan dari class Vector.
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk contoh kasus ini, kita melakukan [Replace Inheritance with Delegation](https://sourcemaking.com/refactoring/replace-inheritance-with-delegation).
 
@@ -76,8 +76,8 @@ public class Stack<E> {
 }
 ```
 
-### Tambahan
+## Tambahan
 
-#### java.util.Stack
+### java.util.Stack
 
 Java sudah memiliki class Stack-nya sendiri di package `java.util`. Class Stack disini dibuat sendiri hanya untuk keperluan studi kasus. FYI, java.util.Stack adalah hasil inherit dari java.util.Vector. Anda dapat menghapus data di tengah-tengah Stack layaknya menggunakan Vector.

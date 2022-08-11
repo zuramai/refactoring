@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/parallel-inheritance-hierarchies)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi ketika ada hirarki inheritance yang selalu ditambahkan bersama-sama.
 
@@ -14,6 +14,6 @@ Smell tidak perlu ditangani bila memang hirarki paralel ini disengaja untuk kepe
 
 Perhatikan code di package `before`. Hirarki `Shape2D` selalu berkembang berbarengan dengan hirarki `AreaInterface`. Bila ada `Shape2D` yang baru, misalnya `Circle`. maka `AreaInterface` juga akan ikut-ikutan membuat anak baru `CircleAreaCalculator`.
 
-### Penyelesaian
+## Penyelesaian
 
 Kita pindahkan logika perhitungan area agar digabung saja ke dalam `Shape2D`.

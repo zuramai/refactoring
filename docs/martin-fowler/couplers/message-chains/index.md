@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/message-chains)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi ketika ingin mengakses sebuah method, perlu dilakukan pemanggilan dari hasil return method lainnya sehingga membentuk rantai: `obj.a().b().c()`.
 
@@ -14,7 +14,7 @@ driver.getCurrentPosition().getLatitude();
 ...
 ```
 
-### Penyelesaian
+## Penyelesaian
 
 Dilakukan [Hide Delegate](https://sourcemaking.com/refactoring/hide-delegate). Perhatikan class [BojekDriver](after/BojekDriver.java) dan [Destination](after/Destination.java), telah ditambahkan fungsi `latitude()` dan `longitude()` yang sebenarnya melakukan delegasi chaining yang dilakukan di package before. Hal ini dilakukan agar class client tidak merasakan adanya chaining, disembunyikan di dalam sini.
 
@@ -30,7 +30,7 @@ public double longitude() {
 
 Alhasil, seperti yang bisa dilihat di [DistanceTest.java](after/DistanceTest.java) di package after, message chain sudah tidak ada.
 
-### Tambahan
+## Tambahan
 
 Jangan terlalu agresif mengurusi message chain karena bisa menyebabkan smell Middle Man.
 

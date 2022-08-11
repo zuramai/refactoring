@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/refused-bequest)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Refused bequest arti harafiahnya adalah "menolak warisan". Dalam smell ini, sebuah class turunan tidak memakai seluruh method hasil extendsnya. Hal ini mengarah ke violasi LSP dan/atau ISP.
 
@@ -50,11 +50,11 @@ expected: <200.00> but was: <400.0>
 
 Fungsi foo mendapatkan area Square adalah 400 karena ketika width di-set 20, height pun turut diubah menjadi 20.
 
-### Penyelesaian
+## Penyelesaian
 
 ectangle dan Square (dan Triangle) memiliki struktur yang serupa, dilakukan extract class, menjadi abstract class [Shape2D](after/Shape2D.java). Kemudian semua class lain menjadi subclass dari abstract class ini. Silakan cek code di package `after`.
 
-### Tambahan
+## Tambahan
 
 Kasus ini merupakan contoh umum untuk menjelaskan violasi Liskov Subtitution Principle (LSP). Kasus ini dikenal dengan [square-rectangle problem](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem).
 

@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/primitive-obsession)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Smell ini terjadi ketika ada field atau parameter yang memakai tipe data primitif, padahal behavior-nya lebih daripada tipe data yang ia gunakan.
 
@@ -12,7 +12,7 @@ Perhatikan contoh [Mahasiswa.java](before/Mahasiswa.java). Terdapat field `name`
 
 Selain itu, terdapat juga field `type` menggunakan String. Padahal value `type` hanya boleh Reguler atau Global. Selain itu, `type` juga digunakan pada [MahasiswaGreeter](before/MahasiswaGreeter.java) yang di dalam sini terdapat smell switch statement.
 
-### Penyelesaian
+## Penyelesaian
 
 Dilakukan [Extract Class](https://sourcemaking.com/refactoring/extract-class) pada `name`, dibuatkan class baru bernama [FullName](after/FullName.java). Kemudian [replace data value with object](https://sourcemaking.com/refactoring/replace-data-value-with-object) pada field `name` di class Mahasiswa.
 

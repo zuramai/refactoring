@@ -2,7 +2,7 @@
 
 [sourcemaking](https://sourcemaking.com/refactoring/smells/speculative-generality)
 
-### Penjelasan Smell
+## Penjelasan Smell
 
 Class, method, field, atau parameter yang sudah disiapkan walaupun belum dipakai. Bahkan sebenarnya tidak ada dalam requirement.
 
@@ -18,6 +18,6 @@ Requirement dari client adalah Price bisa memiliki Currency antara IDR atau USD.
 
 Programmer berspekulasi bahwa IDR dan USD adalah kurs jenis tradisional, nantinya akan ada kurs jenis digital seperti bitcoin. Oleh karena itu, Programmer membuat hirarki seperti di dalam package `before`.
 
-### Penyelesaian
+## Penyelesaian
 
 Dilakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy). Class `Traditional` dan `Digital` dihapus. class `USD` dan `IDR` menjadi turunan langsung dari class `Currency`.

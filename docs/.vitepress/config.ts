@@ -25,6 +25,7 @@ function sidebarMartin() {
     {
       text: 'Dispensables',
       items: [
+        { text: 'Tentang Dispensables', link: '/martin-fowler/dispensables/' },
         { text: 'Comments', link: '/martin-fowler/dispensables/comments/' },
         { text: 'Duplicate Code', link: '/martin-fowler/dispensables/duplicate-code/' },
         { text: 'Lazy Class', link: '/martin-fowler/dispensables/lazy-class/' },
@@ -36,6 +37,7 @@ function sidebarMartin() {
     {
       text: 'Bloaters',
       items: [
+        { text: 'Tentang Bloaters', link: '/martin-fowler/bloaters/' },
         { text: 'Long Method', link: '/martin-fowler/bloaters/long-method/' },
         { text: 'Large Class', link: '/martin-fowler/bloaters/large-class/' },
         { text: 'Primitive Obsession', link: '/martin-fowler/bloaters/primitive-obsession/' },
@@ -46,6 +48,7 @@ function sidebarMartin() {
     {
       text: 'Change Preventers',
       items: [
+        { text: 'Tentang Change Preventers', link: '/martin-fowler/change-preventers/' },
         { text: 'Divergent Change', link: '/martin-fowler/change-preventers/divergent-change/' },
         { text: 'Parallel Inheritance Hierarchies', link: '/martin-fowler/change-preventers/parallel-inheritance-hierarchies/' },
         { text: 'Shotgun Surgery', link: '/martin-fowler/change-preventers/shotgun-surgery/' },
@@ -54,6 +57,7 @@ function sidebarMartin() {
     {
       text: 'Object-Orientation Abusers',
       items: [
+        { text: 'Tentang Object-Orientation Abusers', link: '/martin-fowler/oo-abusers/' },
         { text: 'Switch Statements', link: '/martin-fowler/oo-abusers/switch-statements/' },
         { text: 'Temporary Field', link: '/martin-fowler/oo-abusers/temporary-field/' },
         { text: 'Refused Bequest', link: '/martin-fowler/oo-abusers/refused-bequest/' },
@@ -63,6 +67,7 @@ function sidebarMartin() {
     {
       text: 'Couplers',
       items: [
+        { text: 'Tentang Couplers', link: '/martin-fowler/couplers/' },
         { text: 'Feature Envy', link: '/martin-fowler/couplers/feature-envy/' },
         { text: 'Inappropriate Intimacy', link: '/martin-fowler/couplers/inappropriate-intimacy/' },
         { text: 'Message Chains', link: '/martin-fowler/couplers/message-chains/' },

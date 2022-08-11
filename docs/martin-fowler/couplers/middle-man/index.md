@@ -6,7 +6,7 @@
 
 Middle Man adalah class yang isinya hanya delegasi saja, tidak ada behavior lain selain delegasi ke class lain.
 
-Perhatikan <github-url to="before/ShoppingCart.java">LinkedList.java](before/LinkedList.java) dan [ShoppingCart.java</github-url>. `ShoppingCart` melakukan `add` pada `LinkedList`. Namun ternyata di dalam `LinkedList`, dia hanya delegasi ke `java.util.Vector`.
+Perhatikan <github-url to="before/LinkedList.java">LinkedList.java</github-url> dan <github-url to="before/ShoppingCart.java">ShoppingCart.java</github-url>. `ShoppingCart` melakukan `add` pada `LinkedList`. Namun ternyata di dalam `LinkedList`, dia hanya delegasi ke `java.util.Vector`.
 
 
 ## Penyelesaian

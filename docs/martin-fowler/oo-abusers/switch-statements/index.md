@@ -46,7 +46,7 @@ Untuk contoh kasus ini, kita melakukan tahapan berikut:
 
 1. [Replace Type Code with Subclasses](https://sourcemaking.com/refactoring/replace-type-code-with-subclasses)
 
-Kita memiliki dua type code. `square` dan `triangle`. Oleh karena itu, kita buat class <github-url to="after/Square.java">Shape.java](after/Shape.java) sebagai abstract class yang memiliki fungsi `charNeeded` dan `print`, lalu [Triangle.java](after/Triangle.java) dan [Square.java</github-url> meng-extends class `Shape`.
+Kita memiliki dua type code. `square` dan `triangle`. Oleh karena itu, kita buat class <github-url to="after/Shape.java">Shape.java</github-url> sebagai abstract class yang memiliki fungsi `charNeeded` dan `print`, lalu <github-url to="after/Shape.java">Triangle.java</github-url> dan <github-url to="after/Square.java">Square.java</github-url> meng-extends class `Shape`.
 
 2. [Replace Conditional with Polymorphism](https://sourcemaking.com/refactoring/replace-conditional-with-polymorphism)
 

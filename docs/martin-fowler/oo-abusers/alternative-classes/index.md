@@ -33,7 +33,7 @@ public class PacMan {
 
 ## Penyelesaian
 
-Untuk contoh kasus ini, kita melakukan <github-url to="after/Drawable.java">Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass). Kita membuat interface [Drawable.java</github-url> yang akan di-implement oleh kedua class.
+Untuk contoh kasus ini, kita melakukan [Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass). Kita membuat interface <github-url to="after/Drawable.java">Drawable.java</github-url> yang akan di-implement oleh kedua class.
 
 ```java
 public interface Drawable {
@@ -41,4 +41,4 @@ public interface Drawable {
 }
 ```
 
-Pada class PacMan sebelumnya, nama fungsi adalah `draw`, sedangkan pada Ghost nama fungsi adalah `paint`. Dipilih salah satu dari kedua sinonim tersebut yang akan dipakai. Misal diputuskan `draw` yang dipakai sebagai nama method di interface `Drawable`, maka dilakukan <github-url to="after/Ghost.java">Rename Method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `paint` di [Ghost</github-url>.
+Pada class PacMan sebelumnya, nama fungsi adalah `draw`, sedangkan pada Ghost nama fungsi adalah `paint`. Dipilih salah satu dari kedua sinonim tersebut yang akan dipakai. Misal diputuskan `draw` yang dipakai sebagai nama method di interface `Drawable`, maka dilakukan [Rename Method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `paint` di <github-url to="after/Ghost.java">Ghost.java</github-url>.

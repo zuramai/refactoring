@@ -19,7 +19,6 @@ Smell ini tentunya melanggar prinsip YAGNI (“You Ain’t Gonna Need It”) yan
 
 Jalan paling cepat dalam menyelesaikan speculative hierarchy adalah dengan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dimana class dan hierarki yang terindikasi spekulatif dibuang dan jika ada hierarki yang terpakai digabungkan dengan hierarki utama.
 
-## Contoh
 
 ## Contoh 1: Blogging Annotation speculatives
 

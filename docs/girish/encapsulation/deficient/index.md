@@ -15,7 +15,7 @@ Di bahasa pemrograman Java, terdapat 4 level access modifier yang tentunya berpe
 
 Penggunaan access modifier yang tidak sesuai pada konteks dapat menimbulkan smell yang fatal jika sampai terakses ataupun termodifikasi detail membernya. Smell ini terjadi ketika:
 
-- Ada member yang memiliki access modifier yang permissive, terutama jika member tersebut dapat diakses oleh abstraksi mana saja (mirip [Inappropriate Intimacy](../../../fowler/couplers/inappropriate_intimacy)).
+- Ada member yang memiliki access modifier yang permissive, terutama jika member tersebut dapat diakses oleh abstraksi mana saja (mirip [Inappropriate Intimacy](../../../martin-fowler/couplers/inappropriate_intimacy/)).
 - Member class / abstraksi / hierarki dapat mengakses field tanpa setter getter.
 
 Jika dibiarkan dapat berpotensi adanya pembocoran data yang tidak terduga.

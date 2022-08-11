@@ -8,7 +8,7 @@
 
 Smell ini terjadi ketika mayoritas class-class turunannya (subclass) mempunyai method/behaviour yang seharusnya bisa ditempatkan pada superclass sebagai method atau `abstract` method.
 
-Smell ini seringkali disandingkan dengan smell [Switch-statements](../../../fowler/oo_abusers/switch_statements) dikarenakan smell ini identik dengan pemakaian `if-else` atau `switch` statements yang berulang-ulang (termasuk dengan `instanceof` untuk class matching pada object dan typecasting).
+Smell ini seringkali disandingkan dengan smell [Switch-statements](../../../martin-fowler/oo_abusers/switch_statements/) dikarenakan smell ini identik dengan pemakaian `if-else` atau `switch` statements yang berulang-ulang (termasuk dengan `instanceof` untuk class matching pada object dan typecasting).
 
 ## Penyebab
 
@@ -55,7 +55,7 @@ Meski demikian, developer Java juga mengakui adanya kesalahan yang menyebabkan s
 
 ## Contoh 2: Player, Monster, and NPC attack problems
 
-Pada kasus dalam package <github-url to="before/GameObject">before](before), terdapat 3 class entity yang menyangkut masalah attack, dimana salah satu classnya yaitu `NPC` adalah entity yang tidak dapat diserang oleh entity lain. Ketika class [GameObject.java</github-url> dijadikan perwakilan atas entity-entity tersebut, penyerangan seharusnya tidak boleh terjadi pada `NPC` karena NPC tidak mempunyai darah.
+Pada kasus dalam package <github-url to="before/GameObject">GameObject.java</github-url>, terdapat 3 class entity yang menyangkut masalah attack, dimana salah satu classnya yaitu `NPC` adalah entity yang tidak dapat diserang oleh entity lain. Ketika class `GameObject.java` dijadikan perwakilan atas entity-entity tersebut, penyerangan seharusnya tidak boleh terjadi pada `NPC` karena NPC tidak mempunyai darah.
 
 Di sisi lain, dipergunakanlah class <github-url to="before/AttackService.java">AttackService.java</github-url> untuk menyelesaikan kasus penyerangan NPC, dimana class ini menyangkut adanya conditional checking pada snippet code berikut:
 
@@ -69,7 +69,7 @@ public void hit(GameObject obj, int damage) {
 }
 ```
 
-Snippet code/method `hit()` tentunya menimbulkan smell karena adanya pemakaian conditional checking yang berulang-ulang pada method tersebut. Sebagai gantinya, pada package <github-url to="after/AttackService.java">after](after), pemakaian polymorphism dipergunakan untuk menyelesaikan smell tersebut dengan membuat interface [Hittable](after/Hittable.java) yang mengimplementasikan method `hit(int damage)` untuk dipergunakan pada class `Monster` dan `Player` dimana pada class [AttackService.java</github-url> dalam package `after`, hanya ada pemanggilan method polymorphism dari method `hit(GameObject obj, int damage)` sebagai berikut:
+Snippet code/method `hit()` tentunya menimbulkan smell karena adanya pemakaian conditional checking yang berulang-ulang pada method tersebut. Sebagai gantinya, pada package <github-url to="after/AttackService.java">AttackService</github-url>, pemakaian polymorphism dipergunakan untuk menyelesaikan smell tersebut dengan membuat interface [Hittable](after/Hittable.java) yang mengimplementasikan method `hit(int damage)` untuk dipergunakan pada class `Monster` dan `Player` dimana pada class <github-url to="after/AttackService.java">AttackService.java</github-url> dalam package `after`, hanya ada pemanggilan method polymorphism dari method `hit(GameObject obj, int damage)` sebagai berikut:
 
 ```java
 public void hit(GameObject obj, int damage) {

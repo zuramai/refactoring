@@ -16,7 +16,7 @@ driver.getCurrentPosition().getLatitude();
 
 ## Penyelesaian
 
-Dilakukan <github-url to="after/Destination.java">Hide Delegate](https://sourcemaking.com/refactoring/hide-delegate). Perhatikan class [BojekDriver](after/BojekDriver.java) dan [Destination</github-url>, telah ditambahkan fungsi `latitude()` dan `longitude()` yang sebenarnya melakukan delegasi chaining yang dilakukan di package before. Hal ini dilakukan agar class client tidak merasakan adanya chaining, disembunyikan di dalam sini.
+Dilakukan [Hide Delegate](https://sourcemaking.com/refactoring/hide-delegate). Perhatikan class [BojekDriver](after/BojekDriver.java) dan <github-url to="after/Destination.java">Destination</github-url>, telah ditambahkan fungsi `latitude()` dan `longitude()` yang sebenarnya melakukan delegasi chaining yang dilakukan di package before. Hal ini dilakukan agar class client tidak merasakan adanya chaining, disembunyikan di dalam sini.
 
 ```java
 public double latitude() {

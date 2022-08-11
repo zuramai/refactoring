@@ -95,7 +95,7 @@ Jika algoritma tersebut perlu diganti implementasi dari `bubbleSort()` menjadi `
 
 ## When to Ignore
 
-Adalah bila kasus tersebut terjadi pada *low-level class* yang berisikan implementasi yang sangat detail dan tidak bakal dipakai sama client class di tempat lain karena class tersebut berperan untuk membantu class yang hierarkinya lebih tinggi dan dipakai oleh Client (higher hierarchical class means usable API implementation). Salah satu contoh kasus *low-level class* adalah class [AStar.java](../../../fowler/oo_abusers/temporary_field/after/AStar.java)
+Adalah bila kasus tersebut terjadi pada *low-level class* yang berisikan implementasi yang sangat detail dan tidak bakal dipakai sama client class di tempat lain karena class tersebut berperan untuk membantu class yang hierarkinya lebih tinggi dan dipakai oleh Client (higher hierarchical class means usable API implementation). Salah satu contoh kasus *low-level class* adalah class <github-url to="../../../../martin-fowler/oo-abusers/temporary-field/after/AStar.java">AStar.java</github-url>[]()
 
 ```java
 public class AStar {

@@ -44,6 +44,14 @@ function sidebarMartin() {
       ]
     },
     {
+      text: 'Change Preventers',
+      items: [
+        { text: 'Divergent Change', link: '/martin-fowler/change-preventers/divergent-change/' },
+        { text: 'Parallel Inheritance Hierarchies', link: '/martin-fowler/change-preventers/parallel-inheritance-hierarchies/' },
+        { text: 'Shotgun Surgery', link: '/martin-fowler/change-preventers/shotgun-surgery/' },
+      ]
+    },
+    {
       text: 'Object-Orientation Abusers',
       items: [
         { text: 'Switch Statements', link: '/martin-fowler/oo-abusers/switch-statements/' },

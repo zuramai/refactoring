@@ -8,8 +8,8 @@ Bila class hanya cuma sebagai *dumb data holders*, class bisa dipertimbangkan un
 
 Ketika produk baru awal-awal di-code, sangat wajar bila banyak class yang belum memiliki behavior (baru isi data saja). Namun, bila produk sudah makin berkembang, namun masih ada suatu class yang hanya berisi setter/getter, sudah sinyal kuat untuk dilakukan refactor.
 
-Pada contoh kasus [FullName.java](before/FullName.java), class hanya berisi setter getter untuk field `firstName` dan `lastName`.
+Pada contoh kasus <github-url to="before/FullName.java">FullName.java</github-url>, class hanya berisi setter getter untuk field `firstName` dan `lastName`.
 
 ## Penyelesaian
 
-Semua field dari FullName [dipindahkan](https://sourcemaking.com/refactoring/move-method) ke [User.java](after/User.java). Kemudian class FullName dihapus.
+Semua field dari FullName <github-url to="after/User.java">dipindahkan](https://sourcemaking.com/refactoring/move-method) ke [User.java</github-url>. Kemudian class FullName dihapus.

@@ -40,7 +40,7 @@ inclusive. To specify centering, the alignment should be 0.5. */
 public float alignment;
 ```
 
-Selain kasus `java.awt.Point`, terdapat juga class [SizeRequirements](before/SizeRequirement.java) dari package `java.swing.text` dimana pada variabel `alignment` dapat diakses dan diset nilainya langsung kepada variabel tersebut tanpa harus melalui validasi. Hal ini tentunya menimbulkan dampak fatal jika ada developer dengan \*sengaja\* menginput nilai sembarang.
+Selain kasus `java.awt.Point`, terdapat juga class <github-url to="before/SizeRequirement.java">SizeRequirements</github-url> dari package `java.swing.text` dimana pada variabel `alignment` dapat diakses dan diset nilainya langsung kepada variabel tersebut tanpa harus melalui validasi. Hal ini tentunya menimbulkan dampak fatal jika ada developer dengan \*sengaja\* menginput nilai sembarang.
 
 ## Penyelesaian
 
@@ -63,7 +63,7 @@ public float getAlignment() {
 }
 ```
 
-Hasilnya dalam package [after](before/SizeRequirement.java) ketika user ingin melakukan input angka float alignment, user hanya bisa menginput alignment dari 0 hingga 1 sehingga menghindari adanya variable value mismatches dari variabel `alignment`.
+Hasilnya dalam package <github-url to="before/SizeRequirement.java">after</github-url> ketika user ingin melakukan input angka float alignment, user hanya bisa menginput alignment dari 0 hingga 1 sehingga menghindari adanya variable value mismatches dari variabel `alignment`.
 
 ## Contoh B: Testing private methods
 

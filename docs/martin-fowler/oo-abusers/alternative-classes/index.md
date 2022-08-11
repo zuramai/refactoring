@@ -12,7 +12,7 @@ Hal ini bisa terjadi bisa karena class-class tersebut dikerjakan oleh programmer
 
 Atau bisa karena tidak mengikuti prinsip DIP ([Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)).
 
-Contohnya, class [Ghost.java](before/Ghost.java) memiliki fungsi `paint` yang bertujuan menggambar Ghost dari spritesheet yang tersedia.
+Contohnya, class <github-url to="before/Ghost.java">Ghost.java</github-url> memiliki fungsi `paint` yang bertujuan menggambar Ghost dari spritesheet yang tersedia.
 ```java
 public class Ghost {
 	public void paint(Graphics2D g){
@@ -21,7 +21,7 @@ public class Ghost {
 }
 ```
 
-Di sisi lain, class [PacMan.java](before/PacMan.java) memiliki fungsi `draw` yang bertujuan sama. Menggambar PacMan dari spritesheet yang tersedia.
+Di sisi lain, class <github-url to="before/PacMan.java">PacMan.java</github-url> memiliki fungsi `draw` yang bertujuan sama. Menggambar PacMan dari spritesheet yang tersedia.
 
 ```java
 public class PacMan {
@@ -33,7 +33,7 @@ public class PacMan {
 
 ## Penyelesaian
 
-Untuk contoh kasus ini, kita melakukan [Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass). Kita membuat interface [Drawable.java](after/Drawable.java) yang akan di-implement oleh kedua class.
+Untuk contoh kasus ini, kita melakukan <github-url to="after/Drawable.java">Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass). Kita membuat interface [Drawable.java</github-url> yang akan di-implement oleh kedua class.
 
 ```java
 public interface Drawable {
@@ -41,4 +41,4 @@ public interface Drawable {
 }
 ```
 
-Pada class PacMan sebelumnya, nama fungsi adalah `draw`, sedangkan pada Ghost nama fungsi adalah `paint`. Dipilih salah satu dari kedua sinonim tersebut yang akan dipakai. Misal diputuskan `draw` yang dipakai sebagai nama method di interface `Drawable`, maka dilakukan [Rename Method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `paint` di [Ghost](after/Ghost.java).
+Pada class PacMan sebelumnya, nama fungsi adalah `draw`, sedangkan pada Ghost nama fungsi adalah `paint`. Dipilih salah satu dari kedua sinonim tersebut yang akan dipakai. Misal diputuskan `draw` yang dipakai sebagai nama method di interface `Drawable`, maka dilakukan <github-url to="after/Ghost.java">Rename Method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `paint` di [Ghost</github-url>.

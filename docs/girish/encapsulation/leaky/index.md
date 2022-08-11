@@ -18,7 +18,7 @@ Smell ini terjadi jika pada suatu abstraction membocorkan detail melalui suatu m
 
 ![Member class TodoList](leaky-1.png "Member class TodoList")
 
-Di package before, terdapat class [TodoList](before/ToDoList.java) dimana terdapat method `getList()` yang seharusnya return Vector salinan dari `list`.
+Di package before, terdapat class <github-url to="before/ToDoList.java">TodoList</github-url> dimana terdapat method `getList()` yang seharusnya return Vector salinan dari `list`.
 
 ```java
 public Vector<ToDo> getList() {
@@ -49,7 +49,7 @@ public Vector<ToDo> getList() {
 }
 ```
 
-Sehingga ketika method dalam [TodoList (after)](after/ToDoList.java) tersebut di-invoke, maka setiap isi dari todo list akan diclone ke Vector baru sehingga diperoleh Vector hasil clone dimana setiap modifikasi yang dilakukan pada list tersebut tidak berpengaruh pada list asli dari class tersebut.
+Sehingga ketika method dalam <github-url to="after/ToDoList.java">TodoList (after)</github-url> tersebut di-invoke, maka setiap isi dari todo list akan diclone ke Vector baru sehingga diperoleh Vector hasil clone dimana setiap modifikasi yang dilakukan pada list tersebut tidak berpengaruh pada list asli dari class tersebut.
 
 ## Catatan
 

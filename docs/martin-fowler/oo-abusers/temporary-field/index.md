@@ -8,7 +8,7 @@ Terdapat field yang bukan bagian dari data class yang bersangkutan. Field ini ha
 
 SOLID Principle yang perlu dicek untuk smell ini adalah SRP ([Single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)). Kita perlu mempertimbangkan apakah field yang bersangkutan adalah field yang cocok menempati class tersebut.
 
-Lihat class [BojekDriver.java](before/BojekDriver.java)
+Lihat class <github-url to="before/BojekDriver.java">BojekDriver.java</github-url>
 ```java
 private int f;
 private int g;
@@ -35,9 +35,9 @@ BojekDriver seharusnya hanya memperdulikan data miliknya. Variabel f, g, dan h h
 
 Untuk contoh kasus ini, kita melakukan [Extract Class](https://sourcemaking.com/refactoring/extract-class)
 
-Semua fungsi berkaitan dengan A* dan semua variabelnya kita usir ke class baru [AStar.java](after/AStar.java).
+Semua fungsi berkaitan dengan A* dan semua variabelnya kita usir ke class baru <github-url to="after/AStar.java">AStar.java</github-url>.
 
-Di class [BojekDriver](after/BojekDriver.java), fungsi `shortestPath` tetap ada, namun didelegasi ke class AStar.
+Di class <github-url to="after/BojekDriver.java">BojekDriver</github-url>, fungsi `shortestPath` tetap ada, namun didelegasi ke class AStar.
 
 ```
 Vector<Location> shortestPath(){

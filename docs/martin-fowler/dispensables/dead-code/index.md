@@ -22,7 +22,7 @@ Bila Anda menggunakan IDE yang bagus, dead code biasanya akan diberi warning. Mi
 
 Bahkan untuk beberapa bahasa pemrograman tertentu, contohnya Golang, dead code bukan sekadar warning. Bila ada dead code program tidak bisa di-build.
 
-Terkadang, dead code tidak nampak sejelas itu. Contohnya di class [PriceCalculator.java](before/PriceCalculator.java).
+Terkadang, dead code tidak nampak sejelas itu. Contohnya di class <github-url to="before/PriceCalculator.java">PriceCalculator.java</github-url>.
 
 Bayangkan awalnya requirement dari client adalah: diskon diberikan 10% bila harga kurang dari 10.000, jika lebih, diskon 20%. Terbentuklah code berikut:
 

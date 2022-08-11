@@ -35,7 +35,7 @@ Meski secara hierarki cukup sulit dalam memberantas adanya smell pada tingkat ti
 
 ![Struktur class Order dan TaxCalculator](cyclic-3.png "Cyclic dependency antara class Order dan TaxCalculator")
 
-Pada kasus class [Order.java](before/Order.java), [TaxCalculator.java](before/TaxCalculator.java), dan [Item.java](before/Item.java), terdapat perputaran dependensi antar class. Member field class `Order` terdiri dari (composed of) beberapa `Item`, namun pada class `Order`, terdapat method `getAmount()` dimana dalam isi methodnya melakukan return `taxCal.computeAmount()`. Pada method `computeAmount()`, class tersebut mengambil semua item dalam class `Order` dan menghitung jumlah pajak dari transaksi order dengan memanggil method `calculateTax()` untuk kemudian ditotalkan dengan transaksi order tersebut dan di-return.
+Pada kasus class <github-url to="before/Item.java">Order.java](before/Order.java), [TaxCalculator.java](before/TaxCalculator.java), dan [Item.java</github-url>, terdapat perputaran dependensi antar class. Member field class `Order` terdiri dari (composed of) beberapa `Item`, namun pada class `Order`, terdapat method `getAmount()` dimana dalam isi methodnya melakukan return `taxCal.computeAmount()`. Pada method `computeAmount()`, class tersebut mengambil semua item dalam class `Order` dan menghitung jumlah pajak dari transaksi order dengan memanggil method `calculateTax()` untuk kemudian ditotalkan dengan transaksi order tersebut dan di-return.
 
 ```java
 // class Item
@@ -124,7 +124,7 @@ private double calculateTax(double amount) {
 }
 ```
 
-Sebagai gantinya, kita dapat memindahkan method `computeAmount()` dari class TaxCalculator ke Order sehingga class [TaxCalculator.java](after/Order.java) tidak perlu bergantung pada [Order.java](after/TaxCalculator.java) untuk mengambil data-data dari Order dan semua kalkulasi biaya cukup dilakukan dari class `Order` dan class `TaxCalculator` cukup mengkalkulasikan berbagai jenis pajak yang akan diaplikasikan kepada total biaya dari class `Order`.
+Sebagai gantinya, kita dapat memindahkan method `computeAmount()` dari class TaxCalculator ke Order sehingga class <github-url to="after/TaxCalculator.java">TaxCalculator.java](after/Order.java) tidak perlu bergantung pada [Order.java</github-url> untuk mengambil data-data dari Order dan semua kalkulasi biaya cukup dilakukan dari class `Order` dan class `TaxCalculator` cukup mengkalkulasikan berbagai jenis pajak yang akan diaplikasikan kepada total biaya dari class `Order`.
 
 ## When to Ignore
 

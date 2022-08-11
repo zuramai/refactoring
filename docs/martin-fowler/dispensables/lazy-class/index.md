@@ -12,9 +12,9 @@ Lazy class adalah kondisi dimana class memiliki fungsi yang minim, ekstrimnya ha
 
 Lazy class bisa saja terjadi karena refactoring. Awalnya class ini memiliki fungsi yang banyak. Namun, satu per satu dipindahkan ke class lain karena pertimbangan tertentu.
 
-Pada contoh di [PriceValidator.java](before/PriceValidator.java). Class hanya memiliki satu buah fungsi untuk validasi harga.
+Pada contoh di <github-url to="before/PriceValidator.java">PriceValidator.java</github-url>. Class hanya memiliki satu buah fungsi untuk validasi harga.
 
 
 ## Penyelesaian
 
-Fungsi `validate` dipindahkan ke class [Price.java](after/Price.java) kemudian diberi nama yang lebih sesuai untuk class Price: `isPriceValid`. Setelah dipindahkan, class PriceValidator bisa dihapus.
+Fungsi `validate` dipindahkan ke class <github-url to="after/Price.java">Price.java</github-url> kemudian diberi nama yang lebih sesuai untuk class Price: `isPriceValid`. Setelah dipindahkan, class PriceValidator bisa dihapus.

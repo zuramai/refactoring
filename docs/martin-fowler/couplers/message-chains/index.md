@@ -6,7 +6,7 @@
 
 Smell ini terjadi ketika ingin mengakses sebuah method, perlu dilakukan pemanggilan dari hasil return method lainnya sehingga membentuk rantai: `obj.a().b().c()`.
 
-Perhatikan [DistanceTest.java](before/DistanceTest.java), terdapat message chaining ketika ingin mengakses latitude dan longitude.
+Perhatikan <github-url to="before/DistanceTest.java">DistanceTest.java</github-url>, terdapat message chaining ketika ingin mengakses latitude dan longitude.
 
 ```java
 ...
@@ -16,7 +16,7 @@ driver.getCurrentPosition().getLatitude();
 
 ## Penyelesaian
 
-Dilakukan [Hide Delegate](https://sourcemaking.com/refactoring/hide-delegate). Perhatikan class [BojekDriver](after/BojekDriver.java) dan [Destination](after/Destination.java), telah ditambahkan fungsi `latitude()` dan `longitude()` yang sebenarnya melakukan delegasi chaining yang dilakukan di package before. Hal ini dilakukan agar class client tidak merasakan adanya chaining, disembunyikan di dalam sini.
+Dilakukan <github-url to="after/Destination.java">Hide Delegate](https://sourcemaking.com/refactoring/hide-delegate). Perhatikan class [BojekDriver](after/BojekDriver.java) dan [Destination</github-url>, telah ditambahkan fungsi `latitude()` dan `longitude()` yang sebenarnya melakukan delegasi chaining yang dilakukan di package before. Hal ini dilakukan agar class client tidak merasakan adanya chaining, disembunyikan di dalam sini.
 
 ```java
 public double latitude() {
@@ -28,7 +28,7 @@ public double longitude() {
 }
 ```
 
-Alhasil, seperti yang bisa dilihat di [DistanceTest.java](after/DistanceTest.java) di package after, message chain sudah tidak ada.
+Alhasil, seperti yang bisa dilihat di <github-url to="after/DistanceTest.java">DistanceTest.java</github-url> di package after, message chain sudah tidak ada.
 
 ## Tambahan
 

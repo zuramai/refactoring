@@ -6,9 +6,9 @@
 
 Refused bequest arti harafiahnya adalah "menolak warisan". Dalam smell ini, sebuah class turunan tidak memakai seluruh method hasil extendsnya. Hal ini mengarah ke violasi LSP dan/atau ISP.
 
-Dalam contoh kasus, terdapat class [Stack.java](before/Stack.java) yang melakukan extends terhadap java.util.Vector.
+Dalam contoh kasus, terdapat class <github-url to="before/Stack.java">Stack.java</github-url> yang melakukan extends terhadap java.util.Vector.
 
-Di dalam class [Stack](before/Stack.java), terdapat fungsi standar sebuah stack LIFO. yaitu: pop, push, dan peek.
+Di dalam class <github-url to="before/Stack.java">Stack</github-url>, terdapat fungsi standar sebuah stack LIFO. yaitu: pop, push, dan peek.
 
 ```java
 public void push(E data) {
@@ -56,7 +56,7 @@ Untuk contoh kasus ini, kita melakukan [Replace Inheritance with Delegation](htt
 
 Hubungan `is-a` tidak cocok untuk Stack dan Vector. Kita ubah hubungannya menjadi hubungan `has-a`.
 
-class [Stack](after/Stack.java) menyimpan java.util.Vector sebagai field-nya. Pop, push, dan peek dilakukan dengan Vector ini.
+class <github-url to="after/Stack.java">Stack</github-url> menyimpan java.util.Vector sebagai field-nya. Pop, push, dan peek dilakukan dengan Vector ini.
 
 ```java
 public class Stack<E> {

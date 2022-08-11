@@ -28,7 +28,7 @@ Kedua class besar ini juga belum dihitung jumlah dependensi secara implisit (met
 
 ## Kasus utility class
 
-Diketahui sebuah class bernama [Utility.java](before/Utility.java) dimana pada class tersebut berisikan berbagai macam jenis utility yang dapat dipergunakan oleh class lain.
+Diketahui sebuah class bernama <github-url to="before/Utility.java">Utility.java</github-url> dimana pada class tersebut berisikan berbagai macam jenis utility yang dapat dipergunakan oleh class lain.
 
 ```java
 public class Utilities {
@@ -80,7 +80,7 @@ public class Validation {
 }
 ```
 
-Class `Utility` memegang tanggung jawab lebih dari 1 yaitu validasi dan string manipulation, oleh karenanya diperlukan extract class ke class baru bernama [Validation.java](after/Validation.java) untuk keperluan sehingga pada class [Utility.java](after/Utility.java) cukup dipakai untuk keperluan string manipulation.
+Class `Utility` memegang tanggung jawab lebih dari 1 yaitu validasi dan string manipulation, oleh karenanya diperlukan extract class ke class baru bernama <github-url to="after/Utility.java">Validation.java](after/Validation.java) untuk keperluan sehingga pada class [Utility.java</github-url> cukup dipakai untuk keperluan string manipulation.
 
 ## Julukan
 

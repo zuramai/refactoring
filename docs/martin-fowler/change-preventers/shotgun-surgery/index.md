@@ -8,7 +8,7 @@ Smell ini terjadi ketika kita ingin mengganti atau menambahkan fitur ke dalam co
 
 Perhatikan code di package `before`. Class `PriceService` dan `PriceIncludeTaxService`, di dalamnya terdapat code untuk mengubah price yang access modifier-nya public. Masing-masing fungsi update juga memiliki validasi price masing-masing.
 
-Sekarang, kita mendapatkan permintaan fitur baru dimana setiap kali ada update value pada class `Product`, maka kita melakukan logging menggunakan class [Logger](after/Logger.java).
+Sekarang, kita mendapatkan permintaan fitur baru dimana setiap kali ada update value pada class `Product`, maka kita melakukan logging menggunakan class <github-url to="after/Logger.java">Logger</github-url>.
 
 Bila kita tidak segera melakukan refactor, kita perlu selalu melakukan perubahan ke setiap bagian code update value yang tersebar di banyak class. Karena ini hanya contoh, tersebarnya baru di dua class saja. Bayangkan bila tersebar di puluhan class. Selain capek, hal ini juga rawan *human-error* karena bisa ada bagian code yang lupa diganti.
 

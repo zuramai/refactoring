@@ -14,7 +14,7 @@ Seperti di paragraf dari Martin Fowler diatas, smell ini terjadi ketika sebuah c
 
 Disebut di paragraf diatas: *context boundaries are usually unclear*. Terkadang sulit untuk menentukan apa yang menjadi tanggungjawab class ini atau bukan. Hal ini kembali ke diskusi tim masing-masing ketika code design, atau menunggu gejala benar-benar jelas ketika terbukti benar class ini sering berubah untuk alasan yang berbeda. Pemisahan tanggungjawab paling klasik adalah menggunakan MVC dimana model, view, dan controller dipisah. Bila ingin pemisahan yang lebih detail, Anda juga bisa menggunakan **layered architecture** yang sudah diajarkan di kelas DDD.
 
-Perhatikan class [Rectangle](before/Rectangle.java) di package `before`. Disana terdapat field `width` dan `weight`. Terdapat method `area()` dan `perimeter()`. Dan juga terdapat method `print(String style)`. Kita bisa berargumen bahwa class ini memiliki dua tanggungjawab, yaitu mengurus kalkulasi Rectangle dan juga mengatur tampilan Rectangle ke dalam console.
+Perhatikan class <github-url to="before/Rectangle.java">Rectangle</github-url> di package `before`. Disana terdapat field `width` dan `weight`. Terdapat method `area()` dan `perimeter()`. Dan juga terdapat method `print(String style)`. Kita bisa berargumen bahwa class ini memiliki dua tanggungjawab, yaitu mengurus kalkulasi Rectangle dan juga mengatur tampilan Rectangle ke dalam console.
 
 ## Penyelesaian
 

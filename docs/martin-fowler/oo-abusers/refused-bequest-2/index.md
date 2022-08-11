@@ -6,7 +6,7 @@
 
 Refused bequest arti harafiahnya adalah "menolak warisan". Dalam smell ini, sebuah class turunan tidak memakai seluruh method hasil extendsnya. Hal ini mengarah ke violasi LSP dan/atau ISP.
 
-Perhatikan contoh [Square.java](before/Square.java) di package `before`.
+Perhatikan contoh <github-url to="before/Square.java">Square.java</github-url> di package `before`.
 
 ```java
 @Override
@@ -24,7 +24,7 @@ Karena class Square memiliki invariant width dan height harus sama, maka class S
 
 Dalam kasus ini, penolakan warisan terjadi saat Square melakukan override pada fungsi setter parent-nya.
 
-Masalah terjadi ketika [code ini](before/RectangleTest.java) dijalankan:
+Masalah terjadi ketika <github-url to="before/RectangleTest.java">code ini</github-url> dijalankan:
 
 ```java
 @Test
@@ -52,7 +52,7 @@ Fungsi foo mendapatkan area Square adalah 400 karena ketika width di-set 20, hei
 
 ## Penyelesaian
 
-ectangle dan Square (dan Triangle) memiliki struktur yang serupa, dilakukan extract class, menjadi abstract class [Shape2D](after/Shape2D.java). Kemudian semua class lain menjadi subclass dari abstract class ini. Silakan cek code di package `after`.
+ectangle dan Square (dan Triangle) memiliki struktur yang serupa, dilakukan extract class, menjadi abstract class <github-url to="after/Shape2D.java">Shape2D</github-url>. Kemudian semua class lain menjadi subclass dari abstract class ini. Silakan cek code di package `after`.
 
 ## Tambahan
 

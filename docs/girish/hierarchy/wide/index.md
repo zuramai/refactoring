@@ -34,7 +34,7 @@ Smell ketiga subclass tersebut kemudian diselesaikan dengan melakukan introduce 
 
 ## Contoh 2: Kasus game environment Tree dan Stone
 
-Sebaliknya pada kasus game environment (package [before](before)), terdapat 2 subclass dari [GameObject.java](GameObject.java) yaitu [Tree.java](Tree.java) dan [Stone.java](Stone.java) yang mempunyai salah satu method yang behaviournya mirip yaitu `destroy()`. Kedua subclass tersebut seharusnya mempunyai intermediate class yang berperan atas object-object seperti pohon dan batu yaitu `Environment`.
+Sebaliknya pada kasus game environment (package <github-url to="before)">before</github-url>, terdapat 2 subclass dari [GameObject.java](GameObject.java) yaitu [Tree.java](Tree.java) dan [Stone.java](Stone.java) yang mempunyai salah satu method yang behaviournya mirip yaitu `destroy()`. Kedua subclass tersebut seharusnya mempunyai intermediate class yang berperan atas object-object seperti pohon dan batu yaitu `Environment`.
 
 ```java
 public class Stone extends GameObject {

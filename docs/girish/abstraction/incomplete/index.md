@@ -11,7 +11,7 @@ Contoh pasangan di buku Girish:
 
 ## Masalah
 
-Terdapat method `setAuthor()` di dalam class [Book](before/Book.java).
+Terdapat method `setAuthor()` di dalam class <github-url to="before/Book.java">Book</github-url>.
 
 Tentunya class ini terlihat aneh karena hanya ada fungsi setter tanpa getter (atau behavior lain yang memanfaatkan string author). Kita tidak pernah mendengar ada [Compact Disc](https://en.wikipedia.org/wiki/Compact_disc) yang write-only, bukan?
 

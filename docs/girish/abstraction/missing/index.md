@@ -26,11 +26,11 @@ ISBN adalah kode unik yang dibeli oleh penerbit buku untuk diletakkan di buku te
 
 ISBN yang dipakai sekarang ini memiliki 2 bentuk. ISBN-10 (mengandung 10 digit) dan ISBN-13 (mengandung 13 digit). ISBN-10 bisa dikonversi menjadi ISBN-13, dan sebaliknya. Kedua bentuk ini juga punya algoritma tersendiri untuk mengecek apakah kode tersebut valid atau tidak. Detail algoritma konversi dan pengecekan dapat dilihat di [Wikipedia](https://en.wikipedia.org/wiki/International_Standard_Book_Number).
 
-Perhatikan [Book.java](before/Book.java) pada package before. Terdapat String ISBN yang memiliki behavior pengecekan dan konversi. Behavior ini tentunya bukan merupakan tanggungjawab class Book. String ISBN seharusnya tidak disimpan secara mentah di dalam class ini.
+Perhatikan <github-url to="before/Book.java">Book.java</github-url> pada package before. Terdapat String ISBN yang memiliki behavior pengecekan dan konversi. Behavior ini tentunya bukan merupakan tanggungjawab class Book. String ISBN seharusnya tidak disimpan secara mentah di dalam class ini.
 
 ### Penyelesaian
 
-ISBN diekstrak menjadi hirarki baru. [ISBN.java](after/ISBN.java) sebagai parent-nya dan diturunkan menjadi [ISBN10](after/ISBN10.java) dan [ISBN13](after/ISBN13.java). Agar switch statement lebih rapi, dibuat [ISBNFactory](after/ISBNFactory.java) untuk digunakan oleh class [Book](after/Book.java).
+ISBN diekstrak menjadi hirarki baru. <github-url to="after/Book.java">ISBN.java](after/ISBN.java) sebagai parent-nya dan diturunkan menjadi [ISBN10](after/ISBN10.java) dan [ISBN13](after/ISBN13.java). Agar switch statement lebih rapi, dibuat [ISBNFactory](after/ISBNFactory.java) untuk digunakan oleh class [Book</github-url>.
 
 ## When to Ignore
 

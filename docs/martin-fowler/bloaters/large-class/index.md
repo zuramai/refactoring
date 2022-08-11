@@ -214,4 +214,4 @@ Dilakukan [Move Method](https://sourcemaking.com/refactoring/move-method) pada:
 - fungsi `showSemesters` menjadi `show` di class Semesters.
 - fungsi `isLabelUnique` pindah ke class Semesters.
 
-Lihat hasilnya di package [after](after/SemesterMenu.java).
+Lihat hasilnya di package <github-url to="after/SemesterMenu.java">after</github-url>.

@@ -4,11 +4,12 @@
 
 ## Penjelasan Smell
 
+
 Terdapat pemakaian switch atau if-else untuk menentukan operasi pada variasi tipe-tipe tertentu.
 
 Tidak semua switch atau if-else itu berbahaya. Perlu dipertimbangkan apakah akan terjadi violasi terhadap OCP ([Open Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)).
 
-Lihat class [ShapePrinter.java](before/ShapePrinter.java) dan [CharNeededCounter.java](before/CharNeededCounter.java).
+Lihat class <github-url to="before/ShapePrinter.java">ShapePrinter.java</github-url> dan <github-url to="before/CharNeededCounter.java">CharNeededCounter.java</github-url>.
 
 ```java
 if(shape.equalsIgnoreCase("square")){
@@ -45,7 +46,7 @@ Untuk contoh kasus ini, kita melakukan tahapan berikut:
 
 1. [Replace Type Code with Subclasses](https://sourcemaking.com/refactoring/replace-type-code-with-subclasses)
 
-Kita memiliki dua type code. `square` dan `triangle`. Oleh karena itu, kita buat class [Shape.java](after/Shape.java) sebagai abstract class yang memiliki fungsi `charNeeded` dan `print`, lalu [Triangle.java](after/Triangle.java) dan [Square.java](after/Square.java) meng-extends class `Shape`.
+Kita memiliki dua type code. `square` dan `triangle`. Oleh karena itu, kita buat class <github-url to="after/Square.java">Shape.java](after/Shape.java) sebagai abstract class yang memiliki fungsi `charNeeded` dan `print`, lalu [Triangle.java](after/Triangle.java) dan [Square.java</github-url> meng-extends class `Shape`.
 
 2. [Replace Conditional with Polymorphism](https://sourcemaking.com/refactoring/replace-conditional-with-polymorphism)
 
@@ -63,7 +64,7 @@ Switch Statements adalah code smell yang dibuat Fowler di buku edisi pertamanya.
 
 ## ShapeFactory
 
-User tetap akan meng-input string melalui console. Oleh karena itu, kita perlu menyiapkan sebuah class [Factory](after/ShapeFactory) untuk membuat class Shape dari string yang diinput.
+User tetap akan meng-input string melalui console. Oleh karena itu, kita perlu menyiapkan sebuah class <github-url to="after/ShapeFactory">Factory</github-url> untuk membuat class Shape dari string yang diinput.
 
 Harusnya Anda menyadari bahwa terjadi violasi OCP disini. Bila class `Circle` dibuat, maka if di Factory bertambah. Hal ini dimaklumi karena OCP hanya dilanggar satu kali saja di dalam Factory (tidak akan dilanggar lagi di tempat lain) dan memang terpaksa dilakukan karena input dari user adalah string. Ibaratkan Factory disini berperan sebagai anti-corruption layer.
 

@@ -28,7 +28,7 @@ Jika masalah tersebut menyangkut adanya duplikat dari code-code antar class, ter
 
 Salah satu masalah smell paling sederhana adalah masalah hierarki antar dua atau lebih subclass yang menyangkut 1 atau lebih method yang seharusnya dapat di-*pull up* (alias diimplementasikan abstract method di superclass) malah dibiarkan begitu saja dalam keadaan duplikat.
 
-Namun pada kasus hierarki class entity dan game system dimana class tersebut menyangkut adanya duplikasi code snippet antar class pada class [Monster.java](before/Monster.java) dan [Player.java](before/Player.java) dimana terdapat kesamaan pada bagian code pada method implementasi `hit(int damage)` pada bagian berikut:
+Namun pada kasus hierarki class entity dan game system dimana class tersebut menyangkut adanya duplikasi code snippet antar class pada class <github-url to="before/Player.java">Monster.java](before/Monster.java) dan [Player.java</github-url> dimana terdapat kesamaan pada bagian code pada method implementasi `hit(int damage)` pada bagian berikut:
 
 ```java
 // Monster.java
@@ -53,7 +53,7 @@ public void hit(int damage) {
 }
 ```
 
-Dimulai dari setting variabel `health -= damage` hingga validasi health point terjadi duplikat dimana terdapat kesamaan isi code kecuali pada pengurangan variabel dengan `damage` yang berbeda pada kedua class. Kesamaan code tersebut jika ditunjukkan maka dapat diekstrak ke private method baru bernama `reduceHealth(int damage)` yang ditempatkan di abstract class baru bernama [GameUnit.java](after/GameUnit.java)
+Dimulai dari setting variabel `health -= damage` hingga validasi health point terjadi duplikat dimana terdapat kesamaan isi code kecuali pada pengurangan variabel dengan `damage` yang berbeda pada kedua class. Kesamaan code tersebut jika ditunjukkan maka dapat diekstrak ke private method baru bernama `reduceHealth(int damage)` yang ditempatkan di abstract class baru bernama <github-url to="after/GameUnit.java">GameUnit.java</github-url>
 
 ```java
 protected void reduceHealth(int damage) {

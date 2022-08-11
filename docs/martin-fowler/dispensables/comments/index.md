@@ -20,7 +20,7 @@ Comment boleh diberikan sebagai dokumentasi. Contohnya untuk bahasa pemrograman 
 public class HelloWorld { ... }
 ```
 
-Pada contoh [MenuPrinter.java](before/MenuPrinter.java), terdapat banyak komentar. 
+Pada contoh <github-url to="before/MenuPrinter.java">MenuPrinter.java</github-url>, terdapat banyak komentar. 
 
 Lebih parahnya, terdapat hidden-side-effect pada fungsi `printMenu`. Di komentar diatas menu, tertulis bahwa fungsi ini melakukan print kemudian scan (terjadi [temporal cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science))). Sedangkan nama fungsi hanya `printMenu` saja. Tentu saja ini menyesatkan programmer lain yang akan memakai fungsi ini.
 

@@ -10,7 +10,7 @@ Kadang kesamaan terlihat jelas sehingga mudah di-refactor. Namun terkadang, haru
 
 Satu hal yang bisa menjadi *rule of thumb* adalah [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)). Bila bagian code sudah di copy-paste tiga kali, ini sudah menjadi lampu merah untuk segera dilakukan refactor.
 
-Pada contoh kasus di [Foo.java](before/Foo.java) terdapat banyak bagian code yang duplikat di method bar, baz, dan qux.
+Pada contoh kasus di <github-url to="before/Foo.java">Foo.java</github-url> terdapat banyak bagian code yang duplikat di method bar, baz, dan qux.
 
 ## Penyelesaian
 

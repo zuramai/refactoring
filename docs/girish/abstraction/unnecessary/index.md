@@ -13,8 +13,8 @@ Smell ini mirip dengan speculative generality Martin Fowler.
 
 ## Masalah
 
-Di package before, terdapat [RedButton](before/RedButton.java) dan [BlueButton](before/BlueButton.java) yang sebenarnya hanya menentukan background class javax.swing.JButton. Selain menentukan background, kedua class tersebut tidak memiliki behavior lain.
+Di package before, terdapat <github-url to="before/BlueButton.java">RedButton](before/RedButton.java) dan [BlueButton</github-url> yang sebenarnya hanya menentukan background class javax.swing.JButton. Selain menentukan background, kedua class tersebut tidak memiliki behavior lain.
 
 ## Penyelesaian
 
-Terlalu berlebihan bila sampai kita melakukan inheritance hanya untuk membedakan warna. Warna background sudah cukup diwakilkan oleh atribut di dalam JButton yang bisa diatur menggunakan `setBackground()`. Kedua class RedButton dan BlueButton bisa dihapus. Perhatikan [ButtonTest](after/ButtonTest.java) di package after.
+Terlalu berlebihan bila sampai kita melakukan inheritance hanya untuk membedakan warna. Warna background sudah cukup diwakilkan oleh atribut di dalam JButton yang bisa diatur menggunakan `setBackground()`. Kedua class RedButton dan BlueButton bisa dihapus. Perhatikan <github-url to="after/ButtonTest.java">ButtonTest</github-url> di package after.

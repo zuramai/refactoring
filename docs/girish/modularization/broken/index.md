@@ -29,13 +29,13 @@ Cara paling mudahnya dalam menyelesaikan smell ini adalah dengan memindahkan mem
 
 ## Masalah
 
-Terdapat dua class dalam kasus yaitu [Device.java](before/Device.java) dan [DeviceData.java](before/DeviceData.java). Pada kasus tersebut, member-member dari `Device` dipisahkan ke class lain yang bernama `DeviceData`, dimana method-method dari `Device` akan memanggil data-data dari class `DeviceData`. Hal ini seharusnya tidak boleh dilakukan dalam OOP dikarenakan class seharusnya menampung semua method dan member yang mempunyai tanggungjawab yang sama.
+Terdapat dua class dalam kasus yaitu <github-url to="before/DeviceData.java">Device.java](before/Device.java) dan [DeviceData.java</github-url>. Pada kasus tersebut, member-member dari `Device` dipisahkan ke class lain yang bernama `DeviceData`, dimana method-method dari `Device` akan memanggil data-data dari class `DeviceData`. Hal ini seharusnya tidak boleh dilakukan dalam OOP dikarenakan class seharusnya menampung semua method dan member yang mempunyai tanggungjawab yang sama.
 
 Kasus inilah yang pada akhirnya menimbulkan smell **Broken Modularization** karena adanya perpecahan modul yang memiliki tanggungjawab yang sama dari kelas seharusnya.
 
 ## Penyelesaian
 
-Untuk menyelesaikan kasus smell tersebut, gabungkan field dan method menjadi 1 class sehingga class Device dapat menampung method, member, dan field sesuai tanggungjawabnya masing-masing. Pada class [Device.java](after/Device.java), semua member pindahan dari `DeviceData` ditampung sebagai private member dari `Device`.
+Untuk menyelesaikan kasus smell tersebut, gabungkan field dan method menjadi 1 class sehingga class Device dapat menampung method, member, dan field sesuai tanggungjawabnya masing-masing. Pada class <github-url to="after/Device.java">Device.java</github-url>, semua member pindahan dari `DeviceData` ditampung sebagai private member dari `Device`.
 
 ## When to Ignore
 

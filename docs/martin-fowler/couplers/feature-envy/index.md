@@ -6,7 +6,7 @@
 
 Smell ini terjadi bila ada sebuah method yang lebih sering mengakses data class lain ketimbang class sendiri. Class sendiri pun menjadi 'cemburu'. Bila hal ini terjadi, harus dipikirkan bagaimana cara mengusir method ini ke class lain tersebut.
 
-Pada contoh [Lecturer.java](before/Lecturer.java), terdapat method `isScored` yang hanya mengakses data examiner di class Exam.
+Pada contoh <github-url to="before/Lecturer.java">Lecturer.java</github-url>, terdapat method `isScored` yang hanya mengakses data examiner di class Exam.
 
 ```java
 public boolean isScored(Exam exam) {

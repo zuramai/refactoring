@@ -12,13 +12,13 @@ Smell ini terjadi ketika ada sebuah method yang terlalu panjang. Method yang ter
 - terdapat hidden-side-effect di dalam method. Nama method tidak sesuai dengan apa yang dilakukan di dalamnya.
 - melebihi N baris. N ini merupakan angka yang ditentukan oleh masing-masing tim. Beda perusahaan atau beda bahasa pemrograman bisa beda angka. Di sourcemaking, dibilang tidak boleh lebih dari 10 baris.
 
-Pada contoh [SemesterMenu.java](before/SemesterMenu.java), terdapat method `menu`, `create`, dan `delete` yang melebihi 10 baris.
+Pada contoh <github-url to="before/SemesterMenu.java">SemesterMenu.java</github-url>, terdapat method `menu`, `create`, dan `delete` yang melebihi 10 baris.
 
 ## Penyelesaian
 
 Dilakukan [Extract Method](https://sourcemaking.com/refactoring/extract-method) pada method `menu`, `create`, dan `delete`.
 
-Lihat hasilnya di package [after](after/SemesterMenu.java).
+Lihat hasilnya di package <github-url to="after/SemesterMenu.java">after</github-url>.
 
 Code di dalam method `menu` diekstrak menjadi `showSemesters()`, `printAndGetMenu()`, dan `showSemester()`.
 

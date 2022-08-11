@@ -7,15 +7,15 @@ Contoh pasangan di buku Girish:
 ![pair example](example.png)
 
 
-### Contoh
+## Contoh
 
-#### Masalah
+## Masalah
 
 Terdapat method `setAuthor()` di dalam class [Book](before/Book.java).
 
 Tentunya class ini terlihat aneh karena hanya ada fungsi setter tanpa getter (atau behavior lain yang memanfaatkan string author). Kita tidak pernah mendengar ada [Compact Disc](https://en.wikipedia.org/wiki/Compact_disc) yang write-only, bukan?
 
-#### Penyelesaian
+## Penyelesaian
 
 Dilengkapi dengan menambahkan `getAuthor()`.
 
@@ -32,7 +32,7 @@ Hal ini aneh, karena idealnya, bila memang kelupaan, `getGroup` langsung ditamba
 Hal ini terpaksa dilakukan Java karena bila mereka menambahkan `getGroup` di interface yang sudah terlanjur di-publish, maka semua programmer yang sedang menggunakan versi Java tersebut akan kalang kabut karena terjadi major changes (major version harus ditambahkan). Biasanya software atau library memiliki versioning setidaknya tiga angka dengan format `major.minor.patch`. Contoh: `1.0.5`. Silakan pelajari perkara versioning lebih detail di [semver.org](https://semver.org/).
 
 
-### When to Ignore
+## When to Ignore
 
 Bukan termasuk smell bila memang developer **sengaja** menghilangkan pasangannya. 
 

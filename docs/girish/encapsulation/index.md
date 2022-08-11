@@ -10,11 +10,11 @@ Semua smell di dalam grup ini berkaitan dengan kesalahan dalam merancang enkapsu
 - [Missing Encapsulation](missing) | [Link Video](https://www.youtube.com/watch?v=tHKGrugra70&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=4)
 - [Unexploited Encapsulation](unexploited) | [Link Video](https://www.youtube.com/watch?v=qQC5cXVuX9Y&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju&index=5)
 
-### Filosofi
+## Filosofi
 
 Sebuah mobil mempunyai setir, pedal gas, dan pedal rem. Pedal rem berfungsi untuk melakukan pengereman mobil. Pengereman mobil sendiri mempunyai beberapa jenis, salah satunya adalah pengereman Anti-locking Braking System (ABS). Terkait terhadap kasus tersebut kita sebagai driver tentunya tidak perlu mengetahui detail mengenai sistem pengereman, karena kita cukup mengetahui pengereman tersebut melalui pedal rem kita sehingga detail sistem pengereman seperti ABS tidak diketahui secara langsung oleh kita.
 
-### Prinsip Encapsulation
+## Prinsip Encapsulation
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WqXM5lHEwGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

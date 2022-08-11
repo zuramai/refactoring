@@ -10,21 +10,21 @@ Smell ini terjadi ketika mayoritas class-class turunannya (subclass) mempunyai m
 
 Smell ini seringkali disandingkan dengan smell [Switch-statements](../../../fowler/oo_abusers/switch_statements) dikarenakan smell ini identik dengan pemakaian `if-else` atau `switch` statements yang berulang-ulang (termasuk dengan `instanceof` untuk class matching pada object dan typecasting).
 
-### Penyebab
+## Penyebab
 
 - **Misguided simplistic design & Procedural approach to design**: Developer (minim pengalaman/prosedural) menganggap bahwa pemakaian type value dan conditional statement dapat menyederhanakan desain software.
 - **Overlooking inheritance as a design technique**: Developer menganggap inheritance berfungsi lebih ke penambahan variasi desain ketimbang untuk keperluan hierarkis.
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk menuntaskan smell tersebut, ada dua cara penyelesaian smell tersebut yaitu:
 
 - Jika smell tersebut terjadi karena kesamaan method, lakukan introduce interface atau extract ke abstract class (superclass) untuk class-class terkait.
 - Jika smell tersebut terjadi dimana conditional statements dapat dijadikan class, extract method-method dan member sebagai superclass (abstract/interface) dimana setiap class turunannya mengimplementasikan method-method abstract dari superclass. Teknik ini tentunya akan menjalankan polymorphism method secara langsung pada object variatifnya.
 
-### Contoh
+## Contoh
 
-#### Contoh 1: `java.swing.plaf.windows.XPStyle` margin problems
+## Contoh 1: `java.swing.plaf.windows.XPStyle` margin problems
 
 ![Hierarchical view of 'java.swing.plaf.windows.XPStyle'](hierarchy-missing-1.png "Hierarchical view of 'java.swing.plaf.windows.XPStyle'")
 
@@ -53,7 +53,7 @@ Salah satu penyelesaian dari smell tersebut adalah dengan membuat interface bern
 
 Meski demikian, developer Java juga mengakui adanya kesalahan yang menyebabkan smell ini terjadi karena masalah tanggungnya developer dan kesederhanaan code.
 
-#### Contoh 2: Player, Monster, and NPC attack problems
+## Contoh 2: Player, Monster, and NPC attack problems
 
 Pada kasus dalam package [before](before), terdapat 3 class entity yang menyangkut masalah attack, dimana salah satu classnya yaitu `NPC` adalah entity yang tidak dapat diserang oleh entity lain. Ketika class [GameObject.java](before/GameObject) dijadikan perwakilan atas entity-entity tersebut, penyerangan seharusnya tidak boleh terjadi pada `NPC` karena NPC tidak mempunyai darah.
 
@@ -79,7 +79,7 @@ public void hit(GameObject obj, int damage) {
 }
 ```
 
-### Julukan
+## Julukan
 
 - **Tag class**: Terjadi karena adanya pemakaian tag field (hardcoded variables) untuk cek variasi class.
 - **Missing inheritance**: Adanya bagian code yang terindikasi duplikat atau pemakaian “switch-case” statements yang seharusnya digantikan dengan inheritance.
@@ -87,5 +87,5 @@ public void hit(GameObject obj, int damage) {
 - **Embedded features**: Terjadi karena adanya pemakaian toggle attribute untuk menentukan behaviour dari class-class lain.
 
 
-### When to Ignore
+## When to Ignore
 Smell ini dapat dibiarkan jika class tersebut difungsikan untuk pemakaian design pattern berbasis Factory class atau untuk keperluan input dari file/user prompts dengan encoding teks/inputan sebagai object dalam Java.

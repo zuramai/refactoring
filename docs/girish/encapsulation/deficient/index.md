@@ -20,15 +20,15 @@ Penggunaan access modifier yang tidak sesuai pada konteks dapat menimbulkan smel
 
 Jika dibiarkan dapat berpotensi adanya pembocoran data yang tidak terduga.
 
-### Penyebab Smell
+## Penyebab Smell
 
 - **Easier testability**: Dimana developer ingin menguji private method dengan mengubah access modifier `private` ke `public` yang seharusnya tidak diperbolehkan dalam testing, sehingga dapat terekspos oleh class lain.
 - **Procedural thinking in object oriented context**: Adanya perbedaan paham dari Procedural Programmer terhadap global variabel dimana data member diekspos untuk keperluan akses oleh multiple abstractions.
 - **Quick-fix solutions**: Developer menggunakan jalan pintas agar permasalahan dapat diselesaikan secepat mungkin seiring dengan deadline project dengan mengekspos member secara global padahal hanya untuk beberapa abstraksi saja.
 
-### Contoh A: `java.awt.Point` dan `java.swing.text.SizeRequirements`
+## Contoh A: `java.awt.Point` dan `java.swing.text.SizeRequirements`
 
-#### Masalah
+## Masalah
 
 ![Struktur class java.awt.Point](deficient-1.png "Struktur class java.awt.Point")
 
@@ -42,7 +42,7 @@ public float alignment;
 
 Selain kasus `java.awt.Point`, terdapat juga class [SizeRequirements](before/SizeRequirement.java) dari package `java.swing.text` dimana pada variabel `alignment` dapat diakses dan diset nilainya langsung kepada variabel tersebut tanpa harus melalui validasi. Hal ini tentunya menimbulkan dampak fatal jika ada developer dengan \*sengaja\* menginput nilai sembarang.
 
-#### Penyelesaian
+## Penyelesaian
 
 Pada kasus yang riil, inputan lebih dari 1.0 dianggap variabel yang illegal sehingga perlu direfactor dengan mengubah access modifier `alignment` menjadi private, dan menambahkan method setter *(accessor)* dengan validasi dan getter *(mutator)*.
 
@@ -65,9 +65,9 @@ public float getAlignment() {
 
 Hasilnya dalam package [after](before/SizeRequirement.java) ketika user ingin melakukan input angka float alignment, user hanya bisa menginput alignment dari 0 hingga 1 sehingga menghindari adanya variable value mismatches dari variabel `alignment`.
 
-### Contoh B: Testing private methods
+## Contoh B: Testing private methods
 
-#### Masalah
+## Masalah
 
 ```java
 public class Foo {
@@ -88,7 +88,7 @@ class FooTest {
 
 Dalam kasus B, disebutkan bahwa developer ingin menguji private method dengan mengubah access modifier `private` ke `public`. Hal ini memang ada maksud baik untuk mempermudah testing, padahal hal seperti itu dilarang keras dalam praktek Testing karena dapat membocorkan akses member ke abstraction lain. Fatalnya, abstraction lain dapat mempermainkan private method sesuka hati tanpa harus melakukan *message chaining* antar method abstraction dan berdampak fatal secara sistematis.
 
-#### Penyelesaian
+## Penyelesaian
 
 Salah satu jalan pintas untuk testing private method adalah dengan menggunakan teknik **_Reflector_** dalam package `java.lang.reflect` dimana method diubah accessnya untuk keperluan testing pada contoh [test class](testing_using_reflection/FooTest.java) atau secara syntaxnya:
 ```java
@@ -104,12 +104,12 @@ try {
 
 Solusi tersebut merupakan salah satu cara agar private class tersebut dapat di-test dalam bahasa pemrograman Java.
 
-### When to Ignore
+## When to Ignore
 
 - Jika global member tersebut dibuat dalam nested class atau anonymous class dimana member tersebut diakses kepada class tuan-nya.
 - Class tersebut dipakai untuk meningkatkan performa dan efisiensi dengan mengakses field langsung daripada melalui setter getter.
 
-### Julukan / Nama lain
+## Julukan / Nama lain
 
 - **Hideable public attributes/methods**: Method/attribut global dapat disembunyikan
 - **Unencapsulated class**: Class dibiarkan terekspos

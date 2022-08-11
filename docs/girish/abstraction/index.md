@@ -12,7 +12,7 @@ Semua smell di dalam grup ini berkaitan dengan kesalahan dalam mendesain abstrak
 - [Unutilized Abstraction](unutilized)
 - [Duplicate Abstraction](duplicate)
 
-### Prinsip abstraction
+## Prinsip abstraction
 
 ![Girish abstraction principles](abstraction_principles.png "Girish abstraction principles")
 

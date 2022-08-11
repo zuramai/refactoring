@@ -78,6 +78,6 @@ public class Stack<E> {
 
 ## Tambahan
 
-### java.util.Stack
+## java.util.Stack
 
 Java sudah memiliki class Stack-nya sendiri di package `java.util`. Class Stack disini dibuat sendiri hanya untuk keperluan studi kasus. FYI, java.util.Stack adalah hasil inherit dari java.util.Vector. Anda dapat menghapus data di tengah-tengah Stack layaknya menggunakan Vector.

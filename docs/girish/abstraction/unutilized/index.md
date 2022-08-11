@@ -7,13 +7,13 @@ Suryanarayana et al. menggolongkannya dalam dua jenis:
 - Unreferenced abstractions: concrete class yang tidak pernah dipakai.
 - Orphan abstractions: interface/abstract class yang tidak pernah diturunkan.
 
-### Penyebab Smell
+## Penyebab Smell
 
 - **Speculative design**: sama dengan Martin Fowler speculative generality. Developer membuatnya karena spekulasi fitur di masa yang akan datang yang tidak pasti kejadian.
 - **Leftover Garbage**: awalnya class masih dipakai. Tapi ternyata setelah beberapa kali mengalami refactoring (untuk mengatasi smell lain), developer tidak menyadari class sudah tidak dipakai lagi.
 - **Fear of breaking code**: developer takut menghapus class karena khawatir akan masih dipakai.
 
-### Penyelesaian
+## Penyelesaian
 
 Class/interface dihapus.
 
@@ -33,6 +33,6 @@ Bila menggunakan Eclipse IDE, code yang sudah ditandai `deprecated` akan diberi 
 ![](deprecated.png)
 
 
-### Tambahan
+## Tambahan
 
 Flag `deprecated` tidak hanya berlaku untuk smell ini saja. `Deprecated` bisa Anda manfaatkan ketika belum mau melakukan major breaking changes untuk refactoring smell apapun.

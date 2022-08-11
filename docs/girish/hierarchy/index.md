@@ -11,7 +11,7 @@ Semua smell di dalam grup ini berkaitan dengan kesalahan dalam merancang hierark
 - [Wide Hierarchy](wide) | [Link Video](https://www.youtube.com/watch?v=7pyZYGDz54w&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
 - [Speculative Hierarchy](speculative) | [Link Video](https://www.youtube.com/watch?v=WaI-tpREgd8&list=PLG_Cu5FmqSk2KHT6lXngRvcOmOzuk4_ju)
 
-### Filosofi
+## Filosofi
 
 ![Human Taxonomy](img/girish/hierarchy/hierarchy-philosophy.png "Linnaeus’ taxonomy showing the hierarchical classification of the human species")
 
@@ -19,7 +19,7 @@ Semua makhluk hidup (baik hewan, tumbuhan, manusia, bakteri, jamur, dan makhluk 
 
 Semua ini tentunya merupakan kemajuan dalam dunia biologi berkat [Carl Linnaeus](https://en.wikipedia.org/wiki/Carl_Linnaeus) karena ialah yang merancang pengelompokan makhluk hidup secara taksonomis olehnya.
 
-### Prinsip Hierarchy
+## Prinsip Hierarchy
 
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FvLtPJzya5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

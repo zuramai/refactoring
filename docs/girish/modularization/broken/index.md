@@ -9,12 +9,12 @@ Smell ini terjadi jika pada data member, field, atau method yang seharusnya diku
 - Class yang hanya menampung data tapi tidak ada method yang memperlakukan data/berinteraksi dalam class. Smell ini disamaratakan dengan [Data Class](../../../fowler/dispensables/data_class).
 - Method yang senang bermain dengan member lain di class lain. Smell ini disamaratakan dengan [Feature Envy](../../../fowler/couplers/feature_envy).
 
-### Penyebab
+## Penyebab
 
 - **Procedural thinking in object-oriented languages**: Disebabkan karena developer procedural programming languages mengasumsikan bahwa data harus dipisahkan dari function-function yang memproses data tersebut sehingga dalam OOP, developer memecahkannya ke class terpisah.
 - **Lack of knowledge of existing design**: Dalam beberapa kasus terutama dalam perusahaan besar, terdapat banyak class yang seharusnya dapat developer kerjakan selain dari bagian yang ia kerjakan. Hal itu kurang diketahui olehnya sehingga developer menempatkan member/method pada lokasi yang kurang tepat yang pada akhirnya menimbulkan smell tersebut.
 
-### Penyelesaian
+## Penyelesaian
 
 ![Refactoring move field/member/method](broken-solution.png "Refactoring move field/member/method")
 
@@ -23,26 +23,26 @@ Cara paling mudahnya dalam menyelesaikan smell ini adalah dengan memindahkan mem
 - Method class tersebut sering dipakai oleh class lain, pindahkan method class tersebut ke dalam method class pemakainya dengan ["move field"](https://refactoring.guru/move-field).
 - Member class tersebut sering dipakai oleh class lain, pindahkan member class tersebut ke dalam member class pemakainya dengan ["move method"](https://refactoring.guru/move-method).
 
-### Contoh
+## Contoh
 
 ![Struktur class dalam aplikasi device management](broken-1.png "Struktur class dalam aplikasi device management")
 
-#### Masalah
+## Masalah
 
 Terdapat dua class dalam kasus yaitu [Device.java](before/Device.java) dan [DeviceData.java](before/DeviceData.java). Pada kasus tersebut, member-member dari `Device` dipisahkan ke class lain yang bernama `DeviceData`, dimana method-method dari `Device` akan memanggil data-data dari class `DeviceData`. Hal ini seharusnya tidak boleh dilakukan dalam OOP dikarenakan class seharusnya menampung semua method dan member yang mempunyai tanggungjawab yang sama.
 
 Kasus inilah yang pada akhirnya menimbulkan smell **Broken Modularization** karena adanya perpecahan modul yang memiliki tanggungjawab yang sama dari kelas seharusnya.
 
-#### Penyelesaian
+## Penyelesaian
 
 Untuk menyelesaikan kasus smell tersebut, gabungkan field dan method menjadi 1 class sehingga class Device dapat menampung method, member, dan field sesuai tanggungjawabnya masing-masing. Pada class [Device.java](after/Device.java), semua member pindahan dari `DeviceData` ditampung sebagai private member dari `Device`.
 
-### When to Ignore
+## When to Ignore
 
-#### Auto-generated code
+## Auto-generated code
 Jika code tersebut digenerate secara otomatis dari generator (dari higher-level models, terdiri atas beberapa data class), maka hal tersebut memang dapat diabaikan karena dapat menimbulkan efek *out of sync* jika user melakukan modifikasi pada auto-generated codes. Contoh kasusnya adalah [GUI Builder](https://en.wikipedia.org/wiki/Graphical_user_interface_builder) ataupun [LinQ database modeling](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/).
 
-#### Data Transfer Objects (DTOs)
+## Data Transfer Objects (DTOs)
 
 ![Struktur DTO](broken-dto.png "Struktur Data Transfer Object menurut Martin Fowler")
 

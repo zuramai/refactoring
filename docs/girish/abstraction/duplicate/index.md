@@ -7,7 +7,7 @@ Suryanarayana et al. membagi dua jenis:
 - **Identical name**: nama mirip, behavior beda. Sebaiknya dipertimbangkan nama lain yang lebih cocok agar tidak ambigu.
 - **Identical implementation**: behavior sama. Dipertimbangkan untuk digabung.
 
-### Penyebab Smell
+## Penyebab Smell
 
 - **Copy-paste programming**: developer melakukan copy-paste di sana-sini yang mengakibatkan class duplikat.
 - **Lack of communication**: abstraksi dibuat oleh developer yang berbeda. Karena tidak ada komunikasi antar developer, tidak sengaja ada abtraksi yang duplikat.

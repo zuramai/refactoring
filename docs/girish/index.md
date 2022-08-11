@@ -8,8 +8,9 @@ Semua contoh dalam repository ini dibagi dalam dua package. `before` dan `after`
 
 Semua test case dalam repository ini menggunakan JUnit 5.
 
-### Penjelasan Smell
+## Penjelasan Smell
 
-- [Abstraction](abstraction)
-- [Encapsulation](encapsulation)
-- [Modularization](modularization)
+- [Abstraction](abstraction/)
+- [Encapsulation](encapsulation/)
+- [Modularization](modularization/)
+- [Hierarchy](hierarchy/)

@@ -10,18 +10,18 @@ Salah satu prinsip extreme programming (XP) yang terkenal adalah [You aren't gon
 
 Smell ini tentunya melanggar prinsip YAGNI (“You Ain’t Gonna Need It”) yang seumur-umur tidak akan pernah terpakai apalagi diperlukan dalam requirement.
 
-### Penyebab
+## Penyebab
 
 - **Future-proofing**: Developer terlalu prediktif dengan pembuatan software yang dapat mengakomodir penggunaan class-class yang terpakai di waktu yang akan datang.
 - **Over-engineering**: Developer terlalu nafsu melakukan generalisasi dimana kasus tersebut seharusnya tidak diperlukan dalam requirement.
 
-### Penyelesaian
+## Penyelesaian
 
 Jalan paling cepat dalam menyelesaikan speculative hierarchy adalah dengan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dimana class dan hierarki yang terindikasi spekulatif dibuang dan jika ada hierarki yang terpakai digabungkan dengan hierarki utama.
 
-### Contoh
+## Contoh
 
-#### Contoh 1: Blogging Annotation speculatives
+## Contoh 1: Blogging Annotation speculatives
 
 Misal dalam pembuatan software berbasis web yang dapat mengakomodir pembuatan blog, terdapat 2 jenis anotasi blog yang dapat dilakukan dalam melakukan blogging yaitu `HTML`, `Wordpress style` yang tentunya tertulis dalam requirement.
 
@@ -35,13 +35,13 @@ Lama kelamaan, ramalan markup dalam blogging tersebut ternyata belum pernah terj
 
 Sebagai gantinya, lakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dengan buang hierarki `MarkupStyle` beserta class-classnya sehingga hierarki bersih dari class-class spekulatif.
 
-#### Contoh 2: Digital Currency speculatives
+## Contoh 2: Digital Currency speculatives
 
 Dimabil dari kasus smell Martin Fowler yaitu [Speculative Generalities](/martin-fowler/dispensables/speculative-generality/), terdapat kasus dimana terdapat 2 mata uang yaitu `USD` dan `IDR` dalam requirement namun programmer berspekulasi bahwa IDR dan USD adalah kurs jenis tradisional, nantinya akan ada kurs jenis digital seperti bitcoin. Oleh karena itu, Programmer membuat hirarki seperti di dalam [package `before`](./before).
 
 Sebagai jalan penyelesaiannya, lakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy) dengan menghapus intermediate class `Traditional` dan `Digital`, sehingga class `USD` dan `IDR` menjadi turunan langsung dari class `Currency`.
 
-### Julukan
+## Julukan
 
 - **Extra sub-class**: Terdapat abstract base class yang diextend oleh hanya 1 subclass saja.
 - **Speculative general types**: Terdapat sebuah superclass yang mempunyai 1 subclass dimana fitur yang dikerjakan tidak pernah terpakai sama sekali.

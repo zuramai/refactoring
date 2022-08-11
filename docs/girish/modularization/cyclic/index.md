@@ -10,16 +10,16 @@ Smell ini terjadi ketika dua atau lebih abstraction saling bergantung satu sama 
 
 Smell ini tidak hanya terjadi secara langsung secara inheritence dan field member, namun juga secara tidak langsung secara variabel dalam method maupun secara parametrik. Dampak dari smell ini adalah keharusan sang developer untuk menjalankan, tes, dan modifikasi pasangan cyclic class secara bersamaan, yang bahayanya dapat berpotensi terjadinya *domino-effect* karena harus merubah class yang cyclic secara bersamaan atau dalam kasus fatalnya, bisa menjadi "senjata makan tuan" dari class pemanggil methodnya sendiri.
 
-### Penyebab
+## Penyebab
 
 - **Improper responsibility realization**: Adanya salah penempatan member abstraksi di abstraksi lain.
 - **Passing a self reference**: Adanya passing dengan penggunaan `this` (reference dirinya) ketika melakukan passing referensi ke method dari abstraksi lain.
 - **Implementing call-back functionality**: Adanya pemakaian call-back menimbulkan adanya dependensi cyclic antar class yang tidak diduga.
 - **Hard-to-visualize indirect dependencies**: Dalam beberapa software kompleks, cukup sulit bagi developer untuk visualisasikan hubungan dependensi antar abstraksi sehingga menimbulkan perputaran dependensi antar abstraksi/class.
 
-### Contoh
+## Contoh
 
-#### Contoh 1: `java.util` inter-abstractions cyclic interdepedency
+## Contoh 1: `java.util` inter-abstractions cyclic interdepedency
 
 ![Java interclass cyclic dependency](cyclic-2.png "Java Date, Calendar, and TimeZone interclass cyclic dependency")
 
@@ -31,7 +31,7 @@ Secara mendasar, Girish juga menuliskan catatan mengenai adanya potensi *domino-
 
 Meski secara hierarki cukup sulit dalam memberantas adanya smell pada tingkat tinggi, apalagi pada level programming language API, namun kasus ini bisa dicegah dari bibit-bibitnya pada contoh kasus berikutnya.
 
-#### Contoh 2: Order and TaxCalculator
+## Contoh 2: Order and TaxCalculator
 
 ![Struktur class Order dan TaxCalculator](cyclic-3.png "Cyclic dependency antara class Order dan TaxCalculator")
 
@@ -76,7 +76,7 @@ private double calculateTax(double amount) {
 
 Secara tidak langsung, pemanggilan method `getAmount()` dari class `Order` secara tidak langsung menyebabkan adanya cyclic dependency yang menyebabkan ketergantungan yang berputar-putar. Selain itu, method dalam class ini dicurigai mempunyai smell lain yaitu [Feature Envy](../../../fowler/couplers/feature_envy) dimana method ini hanya mengakses value dari class lain dan secara multidimensional, smell ini terjadi bagaikan lingkaran setan dimana terjadi *adu colong sandal* antar class sehingga rawan terjadi error karena pasangan class tersebut harus dijalankan, dites, dan diubah bersamaan.
 
-### Penyelesaian
+## Penyelesaian
 
 Untuk mencegah terjadinya cyclic depedency, ada berbagai cara untuk menyelesaikan kejadian smell ini yaitu:
 
@@ -126,11 +126,11 @@ private double calculateTax(double amount) {
 
 Sebagai gantinya, kita dapat memindahkan method `computeAmount()` dari class TaxCalculator ke Order sehingga class [TaxCalculator.java](after/Order.java) tidak perlu bergantung pada [Order.java](after/TaxCalculator.java) untuk mengambil data-data dari Order dan semua kalkulasi biaya cukup dilakukan dari class `Order` dan class `TaxCalculator` cukup mengkalkulasikan berbagai jenis pajak yang akan diaplikasikan kepada total biaya dari class `Order`.
 
-### When to Ignore
+## When to Ignore
 
 Pada kasus **Unit cycles between conceptually related abstractions**, terutama pada kasus class `java.util.regex`, terdapat 2 class yang saling bertukar peran dan saling bergantung satu sama lain yaitu class `Matcher` dan `Pattern`. Dalam kasus tersebut, kedua class memang diciptakan terpisah namun terpakai berbarengan. Meski praktik ini tepat untuk diterapkan, namun dalam beberapa kasus tertentu, terutama pada skala besar, class tetap harus dibagi untuk mencegah adanya masalah yang lebih kompleks.
 
-### Referensi
+## Referensi
 
 - Paul C. Jorgensen, "Software Testing: A Craftsman's Approach, Third Edition", Bab 9, Hal 139-146. CRC Press. 2013.
 - Brian Mearns, "Circular Dependencies in Dependency Injection," 11 Apr 2018. Medium. Available at https://medium.com/software-ascending/circular-dependencies-in-dependency-injection-403b790daebb

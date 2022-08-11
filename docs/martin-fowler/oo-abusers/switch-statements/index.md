@@ -57,11 +57,11 @@ Dengan begini, bila ada jenis baru, misalkan `Circle`, kita tinggal extends dari
 
 ## Tambahan
 
-### Revisi Martin Fowler
+## Revisi Martin Fowler
 
 Switch Statements adalah code smell yang dibuat Fowler di buku edisi pertamanya. Di buku edisi kedua, beliau meniadakan code smell ini. Beliau membuat smell baru bernama **Repeated Switches**. Beliau ingin lebih menekankan if-else yang perlu diberantas adalah if-else yang berstruktur sama/mirip dan sering muncul di beberapa tempat. Contohnya di contoh kasus ini if-else square dan triangle muncul dua kali.
 
-### ShapeFactory
+## ShapeFactory
 
 User tetap akan meng-input string melalui console. Oleh karena itu, kita perlu menyiapkan sebuah class [Factory](after/ShapeFactory) untuk membuat class Shape dari string yang diinput.
 

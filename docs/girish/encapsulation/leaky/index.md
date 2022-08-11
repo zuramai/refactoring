@@ -6,15 +6,15 @@
 
 Smell ini terjadi jika pada suatu abstraction membocorkan detail melalui suatu method/interface. Smell ini berbeda dengan Deficient Encapsulation dimana kebocoran abstraction tersebut terjadi pada method yang sudah benar dalam access modifier. Selain itu, penamaan public method/implementation yang mengumbar-umbarkan detail implementation juga menimbulkan smell ini (Misal dalam class `List` terdapat public method bernama `bubbleSort()` yang seharusnya dapat diganti nama dengan `sort()` sehingga dapat diubah implementasi dari proses sorting tersebut).
 
-### Penyebab smell
+## Penyebab smell
 
 - **Lack of awareness of what should be "hidden"**: Developer kurang mengetahui bahwa implementasi tersebut harus disembunyikan dari abstraksi lain sehingga developer tersebut kadang tidak sengaja membocorkan akses tersebut ke abstraksi lain.
 - **Viscosity**: Dimana kasus tersebut memerlukan upaya ekstra agar dapat menciptakan "leak-proof" interface. Pada kasus tersebut, developer terkadang harus menyelesaikan project dengan cepat dan jorok sehingga membiarkan class tersebut dicap smell karenanya.
 - **Use of fine-grained interface**: Pemakaian interface yang terlalu lengkap (termasuk setter dan getternya) sehingga membocorkan detail implementasi yang seharusnya tidak diperlukan.
 
-### Contoh 1: *Swallowed-copy of Collections*
+## Contoh 1: *Swallowed-copy of Collections*
 
-#### Masalah
+## Masalah
 
 ![Member class TodoList](leaky-1.png "Member class TodoList")
 
@@ -29,7 +29,7 @@ public Vector<ToDo> getList() {
 
 Namun tanpa disadari, dikarenakan Java merupakan bahasa pemrograman yang dibekali dengan [variable referencing](https://www.geeksforgeeks.org/is-there-any-concept-of-pointers-in-java/), variabel yang direturn merupakan referensi dari `list` pada class tersebut. Dikarenakan variabel hasil return method tersebut merupakan referensi terhadap `list` atau istilah kerennya adalah *shallow copy*, maka ketika variabel hasil shallow copy tersebut mengalami perubahan, maka referensi terkait juga ikutan berubah sehingga dapat menimbulkan masalah secara sistematis terhadap `list` tersebut.
 
-#### Penyelesaian
+## Penyelesaian
 
 Dikarenakan method tersebut meminta Vector salinan dari `list`, maka salah satu cara menyelesaikan masalah tersebut adalah dengan *deep copy*, dimana variabel `list` diperoleh dengan cloning sehingga menghasilkan copy untuk variabel yang mereka return.
 
@@ -51,7 +51,7 @@ public Vector<ToDo> getList() {
 
 Sehingga ketika method dalam [TodoList (after)](after/ToDoList.java) tersebut di-invoke, maka setiap isi dari todo list akan diclone ke Vector baru sehingga diperoleh Vector hasil clone dimana setiap modifikasi yang dilakukan pada list tersebut tidak berpengaruh pada list asli dari class tersebut.
 
-#### Catatan
+## Catatan
 
 Pada beberapa bahasa pemrograman (termasuk Java), kasus **shallow copy** juga terjadi pada Object dimana ketika suatu variabel yang diassign dari Object mengalami perubahan nilai (baik dari referensi asli maupun variabel pengikutnya), maka variabel-variabel yang mengikuti referensi asli dari Object tersebut mengalami perubahan nilai.
 
@@ -75,7 +75,7 @@ System.out.println("Rectangle 2 length: " + r2.getLength());
 
 Maka dengan penggunaan `clone()` setidaknya dapat menyelesaikan kasus *shallow copy* pada Object sehingga tidak mempengaruhi Object secara struktural.
 
-### Contoh 2: Penamaan method yang mengumbarkan detail implementasi
+## Contoh 2: Penamaan method yang mengumbarkan detail implementasi
 
 Dalam beberapa kasus, misal dalam class `List` terdapat algoritma yang memaparkan detail mengenai sorting pada suatu list.
 
@@ -93,7 +93,7 @@ public class List {
 
 Jika algoritma tersebut perlu diganti implementasi dari `bubbleSort()` menjadi `quickSort()` atau algoritma-algoritma sorting lainnya, tentunya memerlukan waktu yang tidak sebentar untuk mengubah isi dan nama method sekaligus. Sebagai gantinya, kita dapat mengubah nama public method dari `bubbleSort()` menjadi `sort()` sehingga dapat mempermudah implementasi dari proses sorting tersebut dan mencegah user mengetahui detail pada proses sorting List tersebut.
 
-### When to Ignore
+## When to Ignore
 
 Adalah bila kasus tersebut terjadi pada *low-level class* yang berisikan implementasi yang sangat detail dan tidak bakal dipakai sama client class di tempat lain karena class tersebut berperan untuk membantu class yang hierarkinya lebih tinggi dan dipakai oleh Client (higher hierarchical class means usable API implementation). Salah satu contoh kasus *low-level class* adalah class [AStar.java](../../../fowler/oo_abusers/temporary_field/after/AStar.java)
 

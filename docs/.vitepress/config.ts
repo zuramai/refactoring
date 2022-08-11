@@ -2,6 +2,7 @@ export default {
   lang: 'en-US',
   title: 'Refactoring',
   description: 'Vite & Vue powered static site generator.',
+  editLink: true,
   themeConfig: {
     sidebar: {
       '/martin-fowler/': sidebarMartin(),
@@ -11,6 +12,13 @@ export default {
       { text: 'Tentang', link: '/tentang' },
       { text: 'Versi Martin Fowler', link: '/martin-fowler/' },
       { text: 'Versi Girish', link: '/girish/' },
+    ],
+    editLink: {
+      pattern: 'https://github.com/zuramai/refactoring/edit/main/docs/:path',
+      text: 'Ubah halaman ini di GitHub'
+    },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/zuramai/refactoring' }
     ],
     footer: {
       message: 'Created by Saugi',

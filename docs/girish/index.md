@@ -1,3 +1,6 @@
+---
+editLink: true
+---
 # Suryanarayana et al. Code Smells
 
 Untuk pembagian materi, kita menggunakan pengelompokan group smell yang telah dibuat oleh Girish Suryanarayana et al. di bukunya.

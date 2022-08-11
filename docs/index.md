@@ -3,7 +3,6 @@ layout: home
 
 title: Home
 titleTemplate: Refactoring ID
-
 hero:
   name: Refactoring
   text: Code Smells

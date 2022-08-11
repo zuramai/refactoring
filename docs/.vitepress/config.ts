@@ -8,6 +8,7 @@ export default {
       '/girish/': sidebarGirish(),
     },
     nav: [
+      { text: 'Tentang', link: '/tentang' },
       { text: 'Versi Martin Fowler', link: '/martin-fowler/' },
       { text: 'Versi Girish', link: '/girish/' },
     ],

@@ -1,5 +1,6 @@
 # Data Clumps
 
+[sourcemaking](https://sourcemaking.com/refactoring/smells/data-clumps)
 
 ## Penjelasan Smell
 
@@ -22,11 +23,11 @@ public class Kelas {
     private String course;
     private Date start;
     private Date end;
-    
+
     public Date getStart() {
         return start;
     }
-    
+
     public Date getEnd() {
         return end;
     }
@@ -47,33 +48,34 @@ public class Semester {
 	private String label;
 	private Date start;
 	private Date end;
-	
+
 	public Semester(String label, Date start, Date end) {
 		super();
 		this.label = label;
 		this.start = start;
 		this.end = end;
 	}
-	
+
 	public String getLabel() {
 		return label;
 	}
-	
+
 	public Date getStart() {
 		return start;
 	}
-	
+
 	public Date getEnd() {
 		return end;
 	}
 }
 
 ```
+
 </Tab>
 
 </Tabs>
 
-### Penyelesaian
+## Penyelesaian
 
 Karena selalu berbarengan, `start` dan `end` dipertimbangkan untuk digabung dalam class `DateRange`. Agar tidak hanya menjadi smell data class, kita dapat melengkapi class `DateRange` dengan behavior tertentu. Contohnya kita tambahkan validasi `start` tidak boleh melebihi `end`.
 
@@ -89,11 +91,11 @@ public class Kelas {
     private String course;
     private Date start;
     private Date end;
-    
+
     public Date getStart() {
         return start;
     }
-    
+
     public Date getEnd() {
         return end;
     }
@@ -114,28 +116,29 @@ public class Semester {
 	private String label;
 	private Date start;
 	private Date end;
-	
+
 	public Semester(String label, Date start, Date end) {
 		super();
 		this.label = label;
 		this.start = start;
 		this.end = end;
 	}
-	
+
 	public String getLabel() {
 		return label;
 	}
-	
+
 	public Date getStart() {
 		return start;
 	}
-	
+
 	public Date getEnd() {
 		return end;
 	}
 }
 
 ```
+
 </Tab>
 <Tab name="daterange" text="DateRange.java">
 
@@ -147,7 +150,7 @@ import java.util.Date;
 public class DateRange {
 	private Date start;
 	private Date end;
-	
+
 	public DateRange(Date start, Date end) {
 		if(start.after(end)) {
 			throw new IllegalArgumentException("start must be before end");
@@ -155,21 +158,16 @@ public class DateRange {
 		this.start = start;
 		this.end = end;
 	}
-	
+
 	public Date getStart() {
 		return start;
 	}
-	
+
 	public Date getEnd() {
 		return end;
 	}
 }
 ```
+
 </Tab>
 </Tabs>
-
-
-
-## Penyelesaian
-
-Karena selalu berbarengan, `start` dan `end` dipertimbangkan untuk digabung dalam class `DateRange`. Agar tidak hanya menjadi smell data class, kita dapat melengkapi class `DateRange` dengan behavior tertentu. Contohnya kita tambahkan validasi `start` tidak boleh melebihi `end`.

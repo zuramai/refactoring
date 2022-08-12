@@ -4,68 +4,14 @@
 
 ## Penjelasan Smell
 
-Smell ini terjadi ketika ada sebuah class yang memiliki terlalu banyak method dan/atau line of code. 
+Smell ini terjadi ketika ada sebuah class yang memiliki terlalu banyak method dan/atau line of code.
 
 Code yang mengandung Large Class berpotensi melanggar [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) bila terdapat terlalu banyak jenis tanggungjawab yang dilakukan oleh satu class. Bila Large Class disertai dengan pelanggaran SRP, maka terjadi juga smell Divergent Change.
 
 Pada contoh `SemesterMenu.java`, class ini bukan hanya berurusan dengan menu dan input console untuk CRUD semester saja. Class ini juga pegang kendali untuk pembuatan vector semester. Class ini juga terbebani dengan banyaknya variasi cara input di method `getDateInput`, `getIntInput`, dan `getStringInput`.
 
-
 <Tabs>
-<Tab name="main" text="Main.java">
-
-```java
-package fowler.bloaters.large_class.before;
-
-public class Main {
-	public static void main(String[] args) {
-		new Main();
-	}
-	
-	public Main() {
-		SemesterMenu semesterMenu = new SemesterMenu();
-		semesterMenu.open();
-	}
-}
-```
-
-</Tab>
-
-<Tab name="semester" text="Semester.java">
-
-```java
-package fowler.bloaters.large_class.before;
-
-import java.util.Date;
-
-public class Semester {
-	private String label;
-	private Date start;
-	private Date end;
-	
-	public Semester(String label, Date start, Date end) {
-		super();
-		this.label = label;
-		this.start = start;
-		this.end = end;
-	}
-	
-	public String getLabel() {
-		return label;
-	}
-	
-	public Date getStart() {
-		return start;
-	}
-	
-	public Date getEnd() {
-		return end;
-	}
-}
-
-```
-</Tab>
-<Tab name="semesterMenu" text="SemesterMenu.java">
+<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="350">
 
 ```java
 package fowler.bloaters.large_class.before;
@@ -78,12 +24,12 @@ import java.util.Vector;
 public class SemesterMenu {
 	private Vector<Semester> semesters;
 	private Scanner scan;
-	
+
 	public SemesterMenu() {
 		semesters = new Vector<Semester>();
-		scan = new Scanner(System.in); 
+		scan = new Scanner(System.in);
 	}
-	
+
 	public void open() {
 		while(menu()) {}
 	}
@@ -99,21 +45,21 @@ public class SemesterMenu {
 		return true;
 	}
 
-	private void create() {		
+	private void create() {
 		String label;
 		do {
 			label = getStringInput("Input label", 3, 20);
 		} while(!isLabelUnique(label));
-		
+
 		Date startDate, endDate;
 		do {
-			startDate = getDateInput("Input start date", "yyyy-MM-dd");	
+			startDate = getDateInput("Input start date", "yyyy-MM-dd");
 			endDate = getDateInput("Input end date", "yyyy-MM-dd");
 		} while(startDate.after(endDate));
 
 		semesters.add(new Semester(label, startDate, endDate));
 	}
-	
+
 	private boolean isLabelUnique(String label) {
 		for(Semester s : semesters) {
 			if(s.getLabel().equalsIgnoreCase(label)) return false;
@@ -125,7 +71,7 @@ public class SemesterMenu {
 		int input = getIntInput("Choose semester", 1, semesters.size());
 		semesters.removeElementAt(input-1);
 	}
-	
+
 	private int printAndGetMenu() {
 		System.out.println("1. Create");
 		System.out.println("2. Delete");
@@ -156,7 +102,7 @@ public class SemesterMenu {
 	private Date getDateInput(String message, String format) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		sdf.setLenient(false);
-		
+
 		Date date = null;
 		do {
 			try {
@@ -169,7 +115,7 @@ public class SemesterMenu {
 		} while(date == null);
 		return date;
 	}
-	
+
 	private int getIntInput(String message, int min, int max) {
 		int input;
 		do{
@@ -184,7 +130,7 @@ public class SemesterMenu {
 		}while(input < min || input > max);
 		return input;
 	}
-	
+
 	private String getStringInput(String message, int min, int max) {
 		String input;
 		do{
@@ -194,16 +140,68 @@ public class SemesterMenu {
 		return input;
 	}
 }
-
 ```
+
+</Tab>
+<Tab name="main" text="Main.java">
+
+```java
+package fowler.bloaters.large_class.before;
+
+public class Main {
+	public static void main(String[] args) {
+		new Main();
+	}
+
+	public Main() {
+		SemesterMenu semesterMenu = new SemesterMenu();
+		semesterMenu.open();
+	}
+}
+```
+
+</Tab>
+
+<Tab name="semester" text="Semester.java">
+
+```java
+package fowler.bloaters.large_class.before;
+
+import java.util.Date;
+
+public class Semester {
+	private String label;
+	private Date start;
+	private Date end;
+
+	public Semester(String label, Date start, Date end) {
+		super();
+		this.label = label;
+		this.start = start;
+		this.end = end;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public Date getEnd() {
+		return end;
+	}
+}
+```
+
 </Tab>
 
 </Tabs>
 
-
 ## Penyelesaian
 
-Dilakukan [Extract Class](https://sourcemaking.com/refactoring/extract-class) pada: 
+Dilakukan [Extract Class](https://sourcemaking.com/refactoring/extract-class) pada:
 
 - vector Semester dan validasi-validasinya diekstrak ke class baru bernama `Semesters`.
 - fungsi `getDateInput`, `getIntInput`, dan `getStringInput` dibuat menjadi 3 class yang terpisah. Lalu [Extract Superclass](https://sourcemaking.com/refactoring/extract-superclass) menjadi abstract class Console.
@@ -213,5 +211,163 @@ Dilakukan [Move Method](https://sourcemaking.com/refactoring/move-method) pada:
 - fungsi `showSemester` menjadi `toString` di class Semester.
 - fungsi `showSemesters` menjadi `show` di class Semesters.
 - fungsi `isLabelUnique` pindah ke class Semesters.
+
+<Tabs>
+<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="350">
+
+```java
+public class SemesterMenu {
+	private Semesters semesters;
+
+	public SemesterMenu(Semesters s) {
+		semesters = s;
+	}
+
+	public void open() {
+		while(menu()) {}
+	}
+
+	private boolean menu(){
+		semesters.show();
+		int input = printAndGetMenu();
+		switch(input){
+		case 1: create(); break;
+		case 2: delete(); break;
+		case 3: return false;
+		}
+		return true;
+	}
+
+	private int printAndGetMenu() {
+		System.out.println("1. Create");
+		System.out.println("2. Delete");
+		System.out.println("3. Exit");
+		return new IntInputter("input menu", 1, 3).get();
+	}
+
+	private void create() {
+		String label;
+		do {
+			label = new StringInputter("Input label", 3, 20).get();
+		} while(!semesters.isLabelUnique(label));
+
+		Date startDate, endDate;
+		do {
+			startDate = new DateInputter("Input start date", "yyyy-MM-dd").get();
+			endDate = new DateInputter("Input end date", "yyyy-MM-dd").get();
+		} while(startDate.after(endDate));
+
+		semesters.add(new Semester(label, startDate, endDate));
+	}
+
+	private void delete() {
+		int input = new IntInputter("Choose semester", 1, semesters.size()).get();
+		semesters.removeAtIndex(input-1);
+	}
+}
+```
+
+</Tab>
+<Tab name="main" text="Main.java">
+
+```java
+public class Main {
+	public static void main(String[] args) {
+		Semesters s = new Semesters();
+		new Main(s);
+	}
+
+	public Main(Semesters s) {
+		SemesterMenu semesterMenu = new SemesterMenu(s);
+		semesterMenu.open();
+	}
+}
+```
+
+</Tab>
+
+<Tab name="semester" text="Semester.java">
+
+```java
+public class Semester {
+	private String label;
+	private Date start;
+	private Date end;
+
+	public Semester(String label, Date start, Date end) {
+		if(start.after(end)) {
+			throw new IllegalArgumentException("start date must before end date");
+		}
+		this.label = label;
+		this.start = start;
+		this.end = end;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public Date getEnd() {
+		return end;
+	}
+
+	@Override
+	public String toString() {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		return label + " - " + format.format(start) + " - " + format.format(end);
+	}
+}
+```
+
+</Tab>
+<Tab name="semesters" text="Semesters.java">
+
+```java
+public class Semesters {
+	private Vector<Semester> semesters;
+
+	public Semesters() {
+		this.semesters = new Vector<Semester>();
+	}
+
+	public boolean add(Semester s) {
+		if(!isLabelUnique(s.getLabel())) {
+			throw new IllegalArgumentException("label must be unique");
+		}
+		return semesters.add(s);
+	}
+
+	public int size() {
+		return semesters.size();
+	}
+
+	public void removeAtIndex(int idx) {
+		semesters.removeElementAt(idx);
+	}
+
+	public void show() {
+		for(int i = 0; i < semesters.size(); i++) {
+			Semester s = semesters.elementAt(i);
+			System.out.println((i+1) + ". " + s.toString());
+		}
+		System.out.println("");
+	}
+
+	public boolean isLabelUnique(String label) {
+		for(Semester s : semesters) {
+			if(s.getLabel().equalsIgnoreCase(label)) return false;
+		}
+		return true;
+	}
+}
+```
+
+</Tab>
+
+</Tabs>
 
 Lihat hasilnya di package <github-url to="after/SemesterMenu.java">after</github-url>.

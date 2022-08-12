@@ -6,7 +6,6 @@ Contoh pasangan di buku Girish:
 
 ![pair example](example.png)
 
-
 ## Contoh
 
 ## Masalah
@@ -15,13 +14,37 @@ Terdapat method `setAuthor()` di dalam class <github-url to="before/Book.java">B
 
 Tentunya class ini terlihat aneh karena hanya ada fungsi setter tanpa getter (atau behavior lain yang memanfaatkan string author). Kita tidak pernah mendengar ada [Compact Disc](https://en.wikipedia.org/wiki/Compact_disc) yang write-only, bukan?
 
+<Tabs>
+<Tab name="Book" text="Book.java">
+
+```java
+public class Book {
+	//...
+
+	private String author;
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	//...
+}
+```
+
+</Tab>
+</Tabs>
+
 ## Penyelesaian
 
 Dilengkapi dengan menambahkan `getAuthor()`.
 
 ---
 
-Contoh lain yang menarik, Suryanarayana et al. mempermasalahkan code di dalam Java: interface [javax.swing.ButtonModel](https://docs.oracle.com/javase/7/docs/api/javax/swing/ButtonModel.html). 
+Contoh lain yang menarik, Suryanarayana et al. mempermasalahkan code di dalam Java: interface [javax.swing.ButtonModel](https://docs.oracle.com/javase/7/docs/api/javax/swing/ButtonModel.html).
 
 Perhatikan methods yang disediakan pada interface ButtonModel. Semuanya berpasangan, misal `setPressed()` berpasangan dengan `isPressed()`. Namun, terdapat method `setGroup()` tidak memiliki pasangan.
 
@@ -31,10 +54,9 @@ Hal ini aneh, karena idealnya, bila memang kelupaan, `getGroup` langsung ditamba
 
 Hal ini terpaksa dilakukan Java karena bila mereka menambahkan `getGroup` di interface yang sudah terlanjur di-publish, maka semua programmer yang sedang menggunakan versi Java tersebut akan kalang kabut karena terjadi major changes (major version harus ditambahkan). Biasanya software atau library memiliki versioning setidaknya tiga angka dengan format `major.minor.patch`. Contoh: `1.0.5`. Silakan pelajari perkara versioning lebih detail di [semver.org](https://semver.org/).
 
-
 ## When to Ignore
 
-Bukan termasuk smell bila memang developer **sengaja** menghilangkan pasangannya. 
+Bukan termasuk smell bila memang developer **sengaja** menghilangkan pasangannya.
 
 Contohnya, class memang sengaja dibuat hanya punya getter tanpa setter karena atribut read-only.
 

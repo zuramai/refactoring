@@ -12,5 +12,4 @@ public class RectangleAreaCalculator implements AreaInterface {
 	public float area() {
 		return r.getWidth() * r.getHeight();
 	}
-
 }

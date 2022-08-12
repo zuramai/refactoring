@@ -5,6 +5,15 @@
 :root {
   --vp-home-hero-name-background: linear-gradient(to right, #8086f8, #73bae9);
   --vp-home-hero-name-color: transparent;
+
+  --vp-button-brand-bg: #676de7;
+  --vp-button-brand-border: #7f83d6;
+  --vp-button-brand-hover-bg: #787ef0;
+  --vp-button-brand-hover-border: #9296e9;
+  --vp-button-brand-active-border: #969bf8;
+
+  --vp-c-brand: #8185e4;
+  --vp-c-brand-dark: #9c9fe7;
 }
 
 .VPHome .main > * {
@@ -14,6 +23,10 @@
 
 .VPHome .main .actions {
   justify-content: center;
+}
+
+.VPHome .VPHomeHero {
+  background: radial-gradient();
 }
 
 .video-wrapper {

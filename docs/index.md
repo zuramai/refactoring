@@ -2,7 +2,7 @@
 layout: home
 
 title: Home
-titleTemplate: Refactoring ID
+titleTemplate: Refactoring Bahasa Indonesia
 hero:
   name: Refactoring
   text: Code Smells

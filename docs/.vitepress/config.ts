@@ -1,8 +1,14 @@
 export default {
-  lang: 'en-US',
+  lang: 'id-ID',
   title: 'Refactoring',
-  description: 'Vite & Vue powered static site generator.',
+  titleTemplate: 'Refactoring Bahasa Indonesia',
+  description: 'Panduan refactoring untuk mengatasi code berantakan yang anda buat.',
   editLink: true,
+  head: [
+    ['meta', { property: 'og:description', content: 'Panduan refactoring untuk mengatasi code berantakan yang anda buat.' }],
+    ['meta', { property: 'og:image', content: 'https://user-images.githubusercontent.com/45036724/184270375-8b25b8fb-fbf8-48fc-8dd8-9162d1ea049a.png' }],
+    ['meta', { property: 'og:type', content: 'article' }],
+  ],
   themeConfig: {
     sidebar: {
       '/martin-fowler/': sidebarMartin(),

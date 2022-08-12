@@ -5,7 +5,7 @@ Kumpulan metode refactoring dan cara mengatasi code smells yang berpotensi mengu
 
 <div align="center">
 
-[🔗 Buka Website](http://refactoring.saugi.me/)
+[🔗 Buka Website](https://refactoring.saugi.me/)
 
 </div>
 

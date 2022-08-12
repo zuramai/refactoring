@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a as r}from"./app.5c0e4cd3.js";const u=JSON.parse('{"title":"Bloaters","description":"","frontmatter":{},"headers":[],"relativePath":"martin-fowler/bloaters/index.md"}'),i={name:"martin-fowler/bloaters/index.md"},l=r("",3),s=[l];function o(n,d,m,_,c,h){return t(),e("div",null,s)}var f=a(i,[["render",o]]);export{u as __pageData,f as default};

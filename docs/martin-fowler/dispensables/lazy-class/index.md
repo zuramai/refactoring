@@ -4,7 +4,7 @@
 
 ## Penjelasan Smell
 
-Memecah class memang bagus, terlebih bila bertujuan untuk memenuhi SRP. Class yang terlalu gemuk juga sudah dibahas di code smell Large Class.
+Memecah class memang bagus, terlebih bila bertujuan untuk memenuhi Single Responsibility Principle (SRP). Class yang terlalu gemuk juga sudah dibahas di code smell Large Class.
 
 Namun, class yang terlalu kecil juga tidak baik karena semakin banyak class yang harus dibaca, semakin sulit programmer memahami code suatu produk.
 

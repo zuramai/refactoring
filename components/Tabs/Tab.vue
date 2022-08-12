@@ -17,8 +17,10 @@ const activeTab = inject<string>('activeTab')
     margin-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-left: 0;
 }
 .tab__content {
     overflow-y: auto;
+    overflow-x: visible;
 }
 </style>

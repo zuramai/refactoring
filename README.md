@@ -1,6 +1,16 @@
-# Refactoring Bahasa Indonesia
+<h1 align="center">Refactoring Bahasa Indonesia</h1>
+<p align="center">
+Kumpulan metode refactoring dan cara mengatasi code smells yang berpotensi mengurangi maintainability pada sebuah software.
+</p>
 
-Kumpulan metode refactoring dan cara mengatasi code smells yang berpotensi mengurangi _maintainability_ pada sebuah software.
+<div align="center">
+
+[🔗 Buka Website](http://refactoring.saugi.me/)
+
+</div>
+
+![Screenshot 2022-08-12 at 08-48-52 Home Refactoring ID](https://user-images.githubusercontent.com/45036724/184270375-8b25b8fb-fbf8-48fc-8dd8-9162d1ea049a.png)
+
 
 ## Instalasi
 

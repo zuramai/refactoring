@@ -48,7 +48,7 @@ public class Location {
 </Tab>
 </Tabs>
 
-Disini dimisalkan ada driver yang perlu melakukan pencarian rute terdekat. Salah satu algoritma yang dapat digunakan untuk mencari rute adalah [A\*](https://en.wikipedia.org/wiki/A*_search_algorithm). Seperti yang sudah Anda pelajari di matakuliah AI semester lalu, A\* membutuhkan beberapa hal untuk beroperasi, misalnya adalah variabel f, g, h.
+Disini dimisalkan ada driver yang perlu melakukan pencarian rute terdekat. Salah satu algoritma yang dapat digunakan untuk mencari rute adalah [A\*](https://en.wikipedia.org/wiki/A*_search_algorithm). Algorithma A\* membutuhkan beberapa hal untuk beroperasi, misalnya adalah variabel f, g, h.
 
 Di dalam class ini, bayangkan ketiga variabel itu akan digunakan di fungsi `shortestPath` dan juga di fungsi-fungsi private lainnya yang adalah hasil extract fungsi `shortestPath` (diekstrak agar tidak menimbulkan code smell **Long Method**).
 

@@ -61,12 +61,12 @@ public class MenuPrinter {
 
 ## Penyelesaian
 
-Dilakukan [extract method](https://sourcemaking.com/refactoring/extract-method) pada bagian-bagian di dalam fungsi, dan dilakukan [rename method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `printMenu` menjadi `printMenuAndGetInput`.
+Dilakukan [extract method](https://sourcemaking.com/refactoring/extract-method) pada bagian-bagian di dalam fungsi, dan dilakukan [rename method](https://sourcemaking.com/refactoring/rename-method) pada fungsi `printMenu` menjadi `printMenuAndGetInput`. Jadi, kita dapat membuang komentar-komentar yang tidak perlu (karena nama fungsinya sudah menjelaskan).
 
 <Tabs>
 <Tab name="menuPrinter" text="MenuPrinter.java">
 
-```java
+```java{2}
 public class MenuPrinter {
   public int printMenuAndGetInput(){
     printHeader();

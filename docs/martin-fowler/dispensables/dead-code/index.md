@@ -26,10 +26,13 @@ Terkadang, dead code tidak nampak sejelas itu. Contohnya di class <github-url to
 
 Bayangkan awalnya requirement dari client adalah: diskon diberikan 10% bila harga kurang dari 10.000, jika lebih, diskon 20%. Terbentuklah code berikut:
 
+<Tabs>
+<Tab name="PriceCalculator" text="PriceCalculator.java">
+
 ```java
 public double calculate(double price, boolean isDiscount){
   double discountPrice = 0;
-  
+
   if(isDiscount){
     if(price < 10000){
       discountPrice = price * 0.1;
@@ -37,19 +40,25 @@ public double calculate(double price, boolean isDiscount){
       discountPrice = price * 0.2;
     }
   }
-  
+
   return price - discountPrice;
 }
 ```
+
+</Tab>
+</Tabs>
 
 Tiba-tiba, requirement dari client berubah. Client meminta diskon diketok rata 15%.
 
 Entah mengapa, programmer tidak menghapus if yang pertama. Ia langsung menambahkan di bagian bawah sebelum return. Secara requirement, ini tidak masalah. Diskon akan selalu 15%.
 
+<Tabs>
+<Tab name="PriceCalculator" text="PriceCalculator.java">
+
 ```java
 public double calculate(double price, boolean isDiscount){
   double discountPrice = 0;
-  
+
   if(isDiscount){
     if(price < 10000){
       discountPrice = price * 0.1;
@@ -57,14 +66,15 @@ public double calculate(double price, boolean isDiscount){
       discountPrice = price * 0.2;
     }
   }
-  
+
   if(isDiscount)
     discountPrice = price * 0.15;
   return price - discountPrice;
 }
 ```
 
-
+</Tab>
+</Tabs>
 
 ## Penyelesaian
 

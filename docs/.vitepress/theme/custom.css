@@ -26,7 +26,13 @@
 }
 
 .VPHome .VPHomeHero {
-  background: radial-gradient();
+  background: radial-gradient(
+      circle at 15% 43%,
+      #8086f88e,
+      #16173500 150px,
+      #16173500 150px
+    ),
+    radial-gradient(circle at 85% 70%, #73bae979, #969bf800 150px);
 }
 
 .video-wrapper {

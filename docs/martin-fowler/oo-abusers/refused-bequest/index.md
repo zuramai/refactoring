@@ -6,29 +6,47 @@
 
 Refused bequest arti harafiahnya adalah "menolak warisan". Dalam smell ini, sebuah class turunan tidak memakai seluruh method hasil extendsnya. Hal ini mengarah ke violasi LSP dan/atau ISP.
 
-Dalam contoh kasus, terdapat class <github-url to="before/Stack.java">Stack.java</github-url> yang melakukan extends terhadap java.util.Vector.
+Dalam contoh kasus, terdapat class `Stack.java` yang melakukan extends terhadap java.util.Vector.
 
-Di dalam class <github-url to="before/Stack.java">Stack</github-url>, terdapat fungsi standar sebuah stack LIFO. yaitu: pop, push, dan peek.
+Di dalam class `Stack`, terdapat fungsi standar sebuah stack LIFO. yaitu: pop, push, dan peek.
+
+<Tabs>
+<Tab name="Stack" text="Stack.java">
 
 ```java
-public void push(E data) {
-  this.add(data);
-}
+public class Stack<E> extends Vector<E> {
 
-public void pop() {
-  this.removeElementAt(this.size()-1);
-}
+	public void push(E data) {
+		this.add(data);
+	}
 
-public E peek() {
-  return this.elementAt(this.size()-1);
+	public void pop() {
+		this.removeElementAt(this.size()-1);
+	}
+
+	public E peek() {
+		return this.elementAt(this.size()-1);
+	}
+
+	/*
+	 * you cannot remove by index, use pop instead
+	 */
+	@Override
+	public synchronized E remove(int index) {
+		return null;
+	}
 }
 ```
 
+</Tab>
+</Tabs>
+
 Namun, terdapat satu masalah. java.util.Vector memiliki banyak fungsi yang memungkinkan class melakukan manipulasi data di dalam array (misalnya bisa hapus data menggunakan indeks). Tentu saja ini melanggar prinsip LIFO (Last-In First-Out).
 
-Oleh karena itu, di class Stack, diakali dengan cara melakukan override pada masing-masing fungsi java.util.Vector yang tidak ingin digunakan, dan kita menghilangkan kinerjanya dengan cara menghapus pemanggilan super.
+Oleh karena itu, di class `Stack`, diakali dengan cara melakukan override pada masing-masing fungsi java.util.Vector yang tidak ingin digunakan, dan kita menghilangkan kinerjanya dengan cara menghapus pemanggilan super.
 
 Sebelumnya seperti ini:
+
 ```java
 @Override
 public synchronized E remove(int index) {
@@ -56,27 +74,25 @@ Untuk contoh kasus ini, kita melakukan [Replace Inheritance with Delegation](htt
 
 Hubungan `is-a` tidak cocok untuk Stack dan Vector. Kita ubah hubungannya menjadi hubungan `has-a`.
 
-class <github-url to="after/Stack.java">Stack</github-url> menyimpan java.util.Vector sebagai field-nya. Pop, push, dan peek dilakukan dengan Vector ini.
+class `Stack` menyimpan java.util.Vector sebagai field-nya. Pop, push, dan peek dilakukan dengan Vector ini.
 
 ```java
 public class Stack<E> {
 	private Vector<E> vector = new Vector<>();
-	
+
 	public void push(E data) {
 		vector.add(data);
 	}
-	
+
 	public void pop() {
 		vector.removeElementAt(vector.size()-1);
 	}
-	
+
 	public E peek() {
 		return vector.elementAt(vector.size()-1);
 	}
 }
 ```
-
-## Tambahan
 
 ## java.util.Stack
 

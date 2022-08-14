@@ -17,12 +17,10 @@ defineEmits(['click'])
     border-radius: var(--pane-top-left-radius);
     font-size: var(--vp-code-font-size);
     display: block;
-    color: var(--vp-c-text-3);
-}
-.tab__pane:not(.tab__pane--active) a:hover {
+    color: rgba(204, 204, 204, 0.336);
 }
 .tab__pane--active a {
-    background-color: var(--vp-c-bg-soft);
+    background-color: var(--vp-c-black-mute);
     color: var(--vp-c-brand);
     pointer-events: none;
 }

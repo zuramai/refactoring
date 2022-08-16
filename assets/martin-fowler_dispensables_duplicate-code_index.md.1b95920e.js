@@ -99,4 +99,4 @@ import{_ as r,c as D,b as s,d as o,w as n,a as t,e as l,r as a,o as F}from"./app
 <span class="line"><span style="color:#A6ACCD;">		</span><span style="color:#89DDFF;">}</span></span>
 <span class="line"><span style="color:#A6ACCD;">	</span><span style="color:#89DDFF;">}</span></span>
 <span class="line"><span style="color:#89DDFF;">}</span></span>
-<span class="line"></span></code></pre></div>`,3);function h(m,E,f,_,g,v){const p=a("github-url"),e=a("Tab"),c=a("Tabs");return F(),D("div",null,[A,s("p",null,[C,o(p,{to:"before/Foo.java"},{default:n(()=>[i]),_:1}),d]),o(c,null,{default:n(()=>[o(e,{name:"Foo",text:"Foo.java","max-height":350},{default:n(()=>[u]),_:1})]),_:1}),b])}var k=r(y,[["render",h]]);export{x as __pageData,k as default};
+<span class="line"></span></code></pre></div>`,3);function h(m,E,f,_,g,v){const p=a("github-url"),e=a("Tab"),c=a("Tabs");return F(),D("div",null,[A,s("p",null,[C,o(p,{to:"before/Foo.java"},{default:n(()=>[i]),_:1}),d]),o(c,null,{default:n(()=>[o(e,{name:"Foo",text:"Foo.java","max-height":450},{default:n(()=>[u]),_:1})]),_:1}),b])}var k=r(y,[["render",h]]);export{x as __pageData,k as default};

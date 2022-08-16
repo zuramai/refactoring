@@ -13,7 +13,7 @@ Satu hal yang bisa menjadi _rule of thumb_ adalah [Rule of Three](<https://en.wi
 Pada contoh kasus di <github-url to="before/Foo.java">Foo.java</github-url> terdapat banyak bagian code yang duplikat di method bar, baz, dan qux.
 
 <Tabs>
-<Tab name="Foo" text="Foo.java" :max-height="350">
+<Tab name="Foo" text="Foo.java" :max-height="450">
 
 ```java
 package fowler.dispensables.duplicate_code.before;

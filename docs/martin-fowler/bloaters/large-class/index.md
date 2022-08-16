@@ -11,7 +11,7 @@ Code yang mengandung Large Class berpotensi melanggar [Single Responsibility Pri
 Pada contoh `SemesterMenu.java`, class ini bukan hanya berurusan dengan menu dan input console untuk CRUD semester saja. Class ini juga pegang kendali untuk pembuatan vector semester. Class ini juga terbebani dengan banyaknya variasi cara input di method `getDateInput`, `getIntInput`, dan `getStringInput`.
 
 <Tabs>
-<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="350">
+<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="450">
 
 ```java
 package fowler.bloaters.large_class.before;
@@ -213,7 +213,7 @@ Dilakukan [Move Method](https://sourcemaking.com/refactoring/move-method) pada:
 - fungsi `isLabelUnique` pindah ke class Semesters.
 
 <Tabs>
-<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="350">
+<Tab name="semesterMenu" text="SemesterMenu.java" :max-height="450">
 
 ```java
 public class SemesterMenu {

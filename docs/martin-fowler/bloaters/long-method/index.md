@@ -15,7 +15,7 @@ Smell ini terjadi ketika ada sebuah method yang terlalu panjang. Method yang ter
 Pada contoh <github-url to="before/SemesterMenu.java">SemesterMenu.java</github-url>, terdapat method `menu`, `create`, dan `delete` yang melebihi 10 baris.
 
 <Tabs>
-<Tab name="SemesterMenu" text="SemesterMenu.java" :max-height="350">
+<Tab name="SemesterMenu" text="SemesterMenu.java" :max-height="450">
 
 ```java
 public class SemesterMenu {
@@ -137,7 +137,7 @@ public class SemesterMenu {
 ```
 
 </Tab>
-<Tab name="Main" text="Main.java" :max-height="350">
+<Tab name="Main" text="Main.java" :max-height="450">
 
 ```java
 public class Main {
@@ -153,7 +153,7 @@ public class Main {
 ```
 
 </Tab>
-<Tab name="Semester" text="Semester.java" :max-height="350">
+<Tab name="Semester" text="Semester.java" :max-height="450">
 
 ```java
 public class Semester {
@@ -190,7 +190,7 @@ public class Semester {
 Dilakukan [Extract Method](https://sourcemaking.com/refactoring/extract-method) pada method `menu`, `create`, dan `delete`.
 
 <Tabs>
-<Tab name="SemesterMenu" text="SemesterMenu.java" :max-height="350">
+<Tab name="SemesterMenu" text="SemesterMenu.java" :max-height="450">
 
 ```java
 public class SemesterMenu {
@@ -316,7 +316,7 @@ public class SemesterMenu {
 ```
 
 </Tab>
-<Tab name="Main" text="Main.java" :max-height="350">
+<Tab name="Main" text="Main.java" :max-height="450">
 
 ```java
 public class Main {
@@ -332,7 +332,7 @@ public class Main {
 ```
 
 </Tab>
-<Tab name="Semester" text="Semester.java" :max-height="350">
+<Tab name="Semester" text="Semester.java" :max-height="450">
 
 ```java
 public class Semester {

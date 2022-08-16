@@ -11,7 +11,7 @@ Hal ini tidak terjadi hanya di tipe data primitif `int`, `float`, dan sebagainya
 Perhatikan contoh <github-url to="before/Mahasiswa.java">Mahasiswa.java</github-url>. Terdapat field `name` menggunakan String dan tanggal lahir yang dipecah-pecah menjadi integer. Padahal `name` memiliki validasi sesuai dengan regex dalam code, dan tanggal lahir memiliki validasi tanggal harus valid.
 
 <Tabs>
-<Tab name="Mahasiswa" text="Mahasiswa.java" :max-height="350">
+<Tab name="Mahasiswa" text="Mahasiswa.java" :max-height="450">
 
 ```java
 public class Mahasiswa {

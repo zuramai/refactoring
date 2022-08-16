@@ -9,7 +9,7 @@ Smell ini terjadi bila ada sebuah method yang lebih sering mengakses data class 
 Pada contoh <github-url to="before/Lecturer.java">Lecturer.java</github-url>, terdapat method `isScored` yang hanya mengakses data examiner di class Exam.
 
 <Tabs>
-<Tab name="Lecturer" text="Lecturer.java" :max-height="350">
+<Tab name="Lecturer" text="Lecturer.java" :max-height="450">
 
 ```java {10-12}
 public class Lecturer extends Binusian {
@@ -65,7 +65,7 @@ public class Binusian {
 ```
 
 </Tab>
-<Tab name="Exam" text="Exam.java" :max-height="350">
+<Tab name="Exam" text="Exam.java" :max-height="450">
 
 ```java
 public class Exam {
@@ -107,7 +107,7 @@ public class Exam {
 Dilakukan [Move Method](https://sourcemaking.com/refactoring/move-method) pada fungsi `isScored`. Perhatikan di package `after`, isScored dipindahkan ke class Exam.
 
 <Tabs>
-<Tab name="Exam" text="Exam.java" :max-height="350">
+<Tab name="Exam" text="Exam.java" :max-height="450">
 
 ```java
 public class Exam {
@@ -151,7 +151,7 @@ public class Exam {
 
 </Tab>
 
-<Tab name="Lecturer" text="Lecturer.java" :max-height="350">
+<Tab name="Lecturer" text="Lecturer.java" :max-height="450">
 
 ```java
 public class Lecturer extends Binusian {

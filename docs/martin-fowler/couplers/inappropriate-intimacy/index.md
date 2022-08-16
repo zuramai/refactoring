@@ -33,7 +33,7 @@ public class Product {
 ```
 
 </Tab>
-<Tab name="Catalog" text="Catalog.java" :max-height="350">
+<Tab name="Catalog" text="Catalog.java" :max-height="450">
 
 ```java
 public class Catalog {
@@ -195,7 +195,7 @@ public class Product {
 ```
 
 </Tab>
-<Tab name="Catalog" text="Catalog.java" :max-height="350">
+<Tab name="Catalog" text="Catalog.java" :max-height="450">
 
 ```java
 public class Catalog {

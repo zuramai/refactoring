@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as i,a as n}from"./app.169ba118.js";const g=JSON.parse('{"title":"Couplers","description":"","frontmatter":{},"headers":[],"relativePath":"martin-fowler/couplers/index.md"}'),r={name:"martin-fowler/couplers/index.md"},t=n("",4),o=[t];function l(s,d,c,p,u,_){return i(),a("div",null,o)}var h=e(r,[["render",l]]);export{g as __pageData,h as default};

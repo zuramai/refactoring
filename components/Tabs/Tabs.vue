@@ -26,8 +26,9 @@ provide('activeTab', activeTabName)
     <div class="tabs">
         <div class="tab__pane-container">
             <tab-pane
-                v-for="item in tabItems"
-                :text="item.text"
+                v-for="(item,i) in tabItems"
+                :key="i"
+		:text="item.text"
                 :active="activeTabName === item.name"
                 @click="activeTabName = item.name"
             ></tab-pane>

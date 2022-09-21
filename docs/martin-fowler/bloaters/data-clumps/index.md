@@ -89,15 +89,14 @@ import java.util.Date;
 
 public class Kelas {
     private String course;
-    private Date start;
-    private Date end;
+    private DateRange dateRange;
 
-    public Date getStart() {
-        return start;
+    public String getCourse() {
+        return course;
     }
 
-    public Date getEnd() {
-        return end;
+    public DateRange getDateRange() {
+        return dateRange;
     }
 }
 
@@ -114,26 +113,20 @@ import java.util.Date;
 
 public class Semester {
 	private String label;
-	private Date start;
-	private Date end;
+	private DateRange dateRange;
 
-	public Semester(String label, Date start, Date end) {
+	public Semester(String label, DateRange dateRange) {
 		super();
 		this.label = label;
-		this.start = start;
-		this.end = end;
+		this.dateRange = dateRange;
 	}
 
 	public String getLabel() {
 		return label;
 	}
 
-	public Date getStart() {
-		return start;
-	}
-
-	public Date getEnd() {
-		return end;
+	public DateRange getDateRange() {
+		return dateRange;
 	}
 }
 

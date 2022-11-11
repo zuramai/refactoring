@@ -118,7 +118,7 @@ function sidebarGirish() {
         { text: 'Rebellious Hierarchy', link: '/girish/hierarchy/rebellious/' },
         // { text: 'Broken Hierarchy', link: '/girish/hierarchy/broken/' },
         // { text: 'Multipath Hierarchy', link: '/girish/hierarchy/multipath/' },
-        { text: 'Cyclic Hierarchy', link: '/girish/hierarchy/cyclic/' },
+        // { text: 'Cyclic Hierarchy', link: '/girish/hierarchy/cyclic/' },
       ]
     },
     {
@@ -131,7 +131,7 @@ function sidebarGirish() {
         { text: 'Incomplete Abstractions', link: '/girish/abstraction/incomplete/' },
         // { text: 'Multifaceted Abstractions', link: '/girish/abstraction/multifaceted/' },
         { text: 'Unnecessary Abstractions', link: '/girish/abstraction/unnecessary/' },
-        { text: 'Unitilized Abstractions', link: '/girish/abstraction/unitilized/' },
+        { text: 'Unitilized Abstractions', link: '/girish/abstraction/unutilized/' },
         { text: 'Duplicate Abstractions', link: '/girish/abstraction/duplicate/' },
       ]
     },

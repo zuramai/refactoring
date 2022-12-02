@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as r,a as t}from"./app.e4ecf616.js";const f=JSON.parse('{"title":"Tentang Refactoring","description":"","frontmatter":{"layout":"Page"},"headers":[],"relativePath":"tentang.md"}'),n={name:"tentang.md"},i=t("",6),o=[i];function s(l,u,g,p,c,m){return r(),e("div",null,o)}const d=a(n,[["render",s]]);export{f as __pageData,d as default};

@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as i,a as n}from"./app.045baef2.js";const g=JSON.parse('{"title":"Couplers","description":"","frontmatter":{},"headers":[],"relativePath":"martin-fowler/couplers/index.md"}'),r={name:"martin-fowler/couplers/index.md"},t=n("",4),o=[t];function s(l,d,c,p,u,_){return i(),a("div",null,o)}const h=e(r,[["render",s]]);export{g as __pageData,h as default};

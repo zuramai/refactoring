@@ -1,0 +1,87 @@
+import{_ as p,C as e,o as i,c as E,H as a,w as n,k as s,a as l,Q as c}from"./chunks/framework.5a42e701.js";const S=JSON.parse('{"title":"Temporary Field","description":"","frontmatter":{},"headers":[],"relativePath":"martin-fowler/oo-abusers/temporary-field/index.md","filePath":"martin-fowler/oo-abusers/temporary-field/index.md"}'),y={name:"martin-fowler/oo-abusers/temporary-field/index.md"},d=c("",6),u=s("div",{class:"language-java vp-adaptive-theme"},[s("button",{title:"Copy Code",class:"copy"}),s("span",{class:"lang"},"java"),s("pre",{class:"shiki github-dark vp-code-dark"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#F97583"}},"public"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"class"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#B392F0"}},"BojekDriver"),s("span",{style:{color:"#E1E4E8"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	String name;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Location destination;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Location current;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," f;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," g;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," h;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Vector<"),s("span",{style:{color:"#F97583"}},"Location"),s("span",{style:{color:"#E1E4E8"}},"> "),s("span",{style:{color:"#B392F0"}},"shortestPath"),s("span",{style:{color:"#E1E4E8"}},"(){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		Vector<"),s("span",{style:{color:"#F97583"}},"Location"),s("span",{style:{color:"#E1E4E8"}},"> paths "),s("span",{style:{color:"#F97583"}},"="),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"new"),s("span",{style:{color:"#E1E4E8"}}," Vector<>();")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//complex A* algorithm code. using f, g, h variable")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#F97583"}},"return"),s("span",{style:{color:"#E1E4E8"}}," paths;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"}")])])]),s("pre",{class:"shiki github-light vp-code-light"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#D73A49"}},"public"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"class"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#6F42C1"}},"BojekDriver"),s("span",{style:{color:"#24292E"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	String name;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Location destination;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Location current;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," f;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," g;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," h;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Vector<"),s("span",{style:{color:"#D73A49"}},"Location"),s("span",{style:{color:"#24292E"}},"> "),s("span",{style:{color:"#6F42C1"}},"shortestPath"),s("span",{style:{color:"#24292E"}},"(){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		Vector<"),s("span",{style:{color:"#D73A49"}},"Location"),s("span",{style:{color:"#24292E"}},"> paths "),s("span",{style:{color:"#D73A49"}},"="),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"new"),s("span",{style:{color:"#24292E"}}," Vector<>();")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//complex A* algorithm code. using f, g, h variable")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#D73A49"}},"return"),s("span",{style:{color:"#24292E"}}," paths;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"}")])])])],-1),h=s("div",{class:"language-java vp-adaptive-theme"},[s("button",{title:"Copy Code",class:"copy"}),s("span",{class:"lang"},"java"),s("pre",{class:"shiki github-dark vp-code-dark"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#F97583"}},"public"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"class"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#B392F0"}},"Location"),s("span",{style:{color:"#E1E4E8"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"float"),s("span",{style:{color:"#E1E4E8"}}," latitude;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"float"),s("span",{style:{color:"#E1E4E8"}}," longitude;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"}")])])]),s("pre",{class:"shiki github-light vp-code-light"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#D73A49"}},"public"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"class"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#6F42C1"}},"Location"),s("span",{style:{color:"#24292E"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"float"),s("span",{style:{color:"#24292E"}}," latitude;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"float"),s("span",{style:{color:"#24292E"}}," longitude;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"}")])])])],-1),g=c("",5),m=s("code",null,"shortestPath",-1),k=s("div",{class:"language-java vp-adaptive-theme"},[s("button",{title:"Copy Code",class:"copy"}),s("span",{class:"lang"},"java"),s("pre",{class:"shiki github-dark vp-code-dark"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#F97583"}},"public"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"class"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#B392F0"}},"BojekDriver"),s("span",{style:{color:"#E1E4E8"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	String name;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Location destination;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Location current;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Vector<"),s("span",{style:{color:"#F97583"}},"Location"),s("span",{style:{color:"#E1E4E8"}},"> "),s("span",{style:{color:"#B392F0"}},"shortestPath"),s("span",{style:{color:"#E1E4E8"}},"(){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#F97583"}},"return"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"new"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#B392F0"}},"AStar"),s("span",{style:{color:"#E1E4E8"}},"()."),s("span",{style:{color:"#B392F0"}},"shortestPath"),s("span",{style:{color:"#E1E4E8"}},"(current, destination);")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"}")])])]),s("pre",{class:"shiki github-light vp-code-light"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#D73A49"}},"public"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"class"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#6F42C1"}},"BojekDriver"),s("span",{style:{color:"#24292E"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	String name;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Location destination;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Location current;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Vector<"),s("span",{style:{color:"#D73A49"}},"Location"),s("span",{style:{color:"#24292E"}},"> "),s("span",{style:{color:"#6F42C1"}},"shortestPath"),s("span",{style:{color:"#24292E"}},"(){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#D73A49"}},"return"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"new"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#6F42C1"}},"AStar"),s("span",{style:{color:"#24292E"}},"()."),s("span",{style:{color:"#6F42C1"}},"shortestPath"),s("span",{style:{color:"#24292E"}},"(current, destination);")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"}")])])])],-1),A=s("div",{class:"language-java vp-adaptive-theme"},[s("button",{title:"Copy Code",class:"copy"}),s("span",{class:"lang"},"java"),s("pre",{class:"shiki github-dark vp-code-dark"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#F97583"}},"public"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"class"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#B392F0"}},"AStar"),s("span",{style:{color:"#E1E4E8"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," f;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," g;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	"),s("span",{style:{color:"#F97583"}},"private"),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"int"),s("span",{style:{color:"#E1E4E8"}}," h;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	Vector<"),s("span",{style:{color:"#F97583"}},"Location"),s("span",{style:{color:"#E1E4E8"}},"> "),s("span",{style:{color:"#B392F0"}},"shortestPath"),s("span",{style:{color:"#E1E4E8"}},"(Location "),s("span",{style:{color:"#FFAB70"}},"current"),s("span",{style:{color:"#E1E4E8"}},", Location "),s("span",{style:{color:"#FFAB70"}},"destination"),s("span",{style:{color:"#E1E4E8"}},"){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		Vector<"),s("span",{style:{color:"#F97583"}},"Location"),s("span",{style:{color:"#E1E4E8"}},"> paths "),s("span",{style:{color:"#F97583"}},"="),s("span",{style:{color:"#E1E4E8"}}," "),s("span",{style:{color:"#F97583"}},"new"),s("span",{style:{color:"#E1E4E8"}}," Vector<>();")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//complex A* algorithm code. using f, g, h variable")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"		"),s("span",{style:{color:"#F97583"}},"return"),s("span",{style:{color:"#E1E4E8"}}," paths;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#E1E4E8"}},"}")])])]),s("pre",{class:"shiki github-light vp-code-light"},[s("code",null,[s("span",{class:"line"},[s("span",{style:{color:"#D73A49"}},"public"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"class"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#6F42C1"}},"AStar"),s("span",{style:{color:"#24292E"}}," {")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," f;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," g;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	"),s("span",{style:{color:"#D73A49"}},"private"),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"int"),s("span",{style:{color:"#24292E"}}," h;")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	Vector<"),s("span",{style:{color:"#D73A49"}},"Location"),s("span",{style:{color:"#24292E"}},"> "),s("span",{style:{color:"#6F42C1"}},"shortestPath"),s("span",{style:{color:"#24292E"}},"(Location "),s("span",{style:{color:"#E36209"}},"current"),s("span",{style:{color:"#24292E"}},", Location "),s("span",{style:{color:"#E36209"}},"destination"),s("span",{style:{color:"#24292E"}},"){")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		Vector<"),s("span",{style:{color:"#D73A49"}},"Location"),s("span",{style:{color:"#24292E"}},"> paths "),s("span",{style:{color:"#D73A49"}},"="),s("span",{style:{color:"#24292E"}}," "),s("span",{style:{color:"#D73A49"}},"new"),s("span",{style:{color:"#24292E"}}," Vector<>();")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//complex A* algorithm code. using f, g, h variable")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#6A737D"}},"//...")]),l(`
+`),s("span",{class:"line"}),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"		"),s("span",{style:{color:"#D73A49"}},"return"),s("span",{style:{color:"#24292E"}}," paths;")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"	}")]),l(`
+`),s("span",{class:"line"},[s("span",{style:{color:"#24292E"}},"}")])])])],-1);function v(_,f,D,b,F,j){const o=e("Tab"),t=e("Tabs"),r=e("github-url");return i(),E("div",null,[d,a(t,null,{default:n(()=>[a(o,{name:"BojekDriver",text:"BojekDriver.java"},{default:n(()=>[u]),_:1}),a(o,{name:"Location",text:"Location.java"},{default:n(()=>[h]),_:1})]),_:1}),g,s("p",null,[l("Semua fungsi berkaitan dengan A* dan semua variabelnya kita usir ke class baru "),a(r,{to:"after/AStar.java"},{default:n(()=>[l("AStar.java")]),_:1}),l(".")]),s("p",null,[l("Di class "),a(r,{to:"after/BojekDriver.java"},{default:n(()=>[l("BojekDriver")]),_:1}),l(", fungsi "),m,l(" tetap ada, namun didelegasi ke class AStar.")]),a(t,null,{default:n(()=>[a(o,{name:"BojekDriver",text:"BojekDriver.java"},{default:n(()=>[k]),_:1}),a(o,{name:"AStar",text:"AStar.java"},{default:n(()=>[A]),_:1})]),_:1})])}const B=p(y,[["render",v]]);export{S as __pageData,B as default};

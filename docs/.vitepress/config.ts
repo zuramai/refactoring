@@ -154,7 +154,7 @@ function sidebarGirish() {
         { text: 'Broken Modularization', link: '/girish/modularization/broken/' },
         { text: 'Insufficient Modularization', link: '/girish/modularization/insufficient/' },
         { text: 'Cyclically-dependent Modularization', link: '/girish/modularization/cyclically-dependent/' },
-        { text: 'Hub-like Modularization', link: '/girish/modularization/hub-like/' },
+        { text: 'Hub-like Modularization', link: '/girish/modularization/hub/' },
       ]
     },
   ]

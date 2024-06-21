@@ -18,6 +18,160 @@ Requirement dari client adalah Price bisa memiliki Currency antara IDR atau USD.
 
 Programmer berspekulasi bahwa IDR dan USD adalah kurs jenis tradisional, nantinya akan ada kurs jenis digital seperti bitcoin. Oleh karena itu, Programmer membuat hirarki seperti di dalam package `before`.
 
+<Tabs>
+<Tab name="Currency" text="Currency.java">
+
+```java
+public abstract class Currency {
+	public abstract String getCode();
+}
+
+```
+</Tab>
+
+<Tab name="Traditional" text="Traditional.java">
+
+```java
+public abstract class Traditional extends Currency {
+
+}
+
+```
+</Tab>
+
+<Tab name="Digital" text="Digital.java">
+
+```java
+public abstract class Digital extends Currency {
+
+}
+
+```
+</Tab>
+
+<Tab name="IDR" text="IDR.java">
+
+```java
+public class IDR extends Traditional {
+	@Override
+	public String getCode() {
+		return "IDR";
+	}
+}
+```
+</Tab>
+
+<Tab name="USD" text="USD.java">
+
+```java
+public class USD extends Traditional {
+	@Override
+	public String getCode() {
+		return "USD";
+	}
+}
+
+```
+</Tab>
+
+<Tab name="Price" text="Price.java">
+
+```java
+public class Price {
+	int value;
+	Currency currency;
+	
+	public Price(int value, Currency currency) {
+		this.value = value;
+		this.currency = currency;
+	}
+	
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
+	}
+	public Currency getCurrency() {
+		return currency;
+	}
+	public void setCurrency(Currency currency) {
+		this.currency = currency;
+	}
+}
+
+```
+</Tab>
+
+</Tabs>
+
 ## Penyelesaian
 
 Dilakukan [Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy). Class `Traditional` dan `Digital` dihapus. class `USD` dan `IDR` menjadi turunan langsung dari class `Currency`.
+
+<Tabs>
+<Tab name="Currency" text="Currency.java">
+
+```java
+public abstract class Currency {
+	public abstract String getCode();
+}
+
+```
+</Tab>
+
+<Tab name="IDR" text="IDR.java">
+
+```java
+public class IDR extends Currency {
+	@Override
+	public String getCode() {
+		return "IDR";
+	}
+}
+
+```
+</Tab>
+
+<Tab name="USD" text="USD.java">
+
+```java
+public class USD extends Currency {
+	@Override
+	public String getCode() {
+		return "USD";
+	}
+}
+```
+</Tab>
+
+<Tab name="Price" text="Price.java">
+
+```java
+public class Price {
+	int value;
+	Currency currency;
+	
+	public Price(int value, Currency currency) {
+		this.value = value;
+		this.currency = currency;
+	}
+	
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
+	}
+	public Currency getCurrency() {
+		return currency;
+	}
+	public void setCurrency(Currency currency) {
+		this.currency = currency;
+	}
+}
+```
+</Tab>
+
+
+</Tabs>
